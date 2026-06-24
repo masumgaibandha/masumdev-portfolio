@@ -1,6 +1,7 @@
 export const featuredProjects = [
   {
     id: 1,
+    slug: "hireloop",
     title: "HireLoop",
     category: "Hiring Platform",
     description:
@@ -9,6 +10,7 @@ export const featuredProjects = [
   },
   {
     id: 2,
+    slug: "taskforge",
     title: "TaskForge",
     category: "Freelance Marketplace",
     description:
@@ -17,6 +19,7 @@ export const featuredProjects = [
   },
   {
     id: 3,
+    slug: "assetverse",
     title: "AssetVerse",
     category: "Asset Management",
     description:
@@ -25,6 +28,7 @@ export const featuredProjects = [
   },
   {
     id: 4,
+    slug: "studynook",
     title: "StudyNook",
     category: "Learning Platform",
     description:

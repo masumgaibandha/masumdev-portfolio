@@ -41,9 +41,12 @@ const FeaturedProjects = ({ projects }) => {
                 ))}
               </div>
 
-              <button className="mt-8 font-medium text-cyan-400 transition group-hover:translate-x-1">
+              <Link
+                href={`/projects/${project.slug}`}
+                className="mt-8 inline-flex font-medium text-cyan-400 transition group-hover:translate-x-1"
+              >
                 View Case Study →
-              </button>
+              </Link>
             </div>
           ))}
         </div>
