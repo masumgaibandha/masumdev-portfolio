@@ -70,7 +70,7 @@ const Footer = () => {
               </Link>
 
               <Link
-                href="mailto:masumgaibandha@gmail.com"
+                href="mailto:masum@masumdev.com"
                 className="flex size-10 items-center justify-center rounded-xl border border-[var(--border)] text-[var(--muted)] transition hover:border-[var(--primary)] hover:text-[var(--primary)]"
               >
                 <MdOutlineMail />
