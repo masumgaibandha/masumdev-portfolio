@@ -1,4 +1,5 @@
 import ThemeToggle from "@/components/common/ThemeToggle";
+import AboutPreview from "@/components/home/AboutPreview";
 import FeaturedProjects from "@/components/home/FeaturedProjects";
 import Hero from "@/components/home/Hero";
 import Services from "@/components/home/Services";
@@ -16,6 +17,7 @@ export default function HomePage() {
       <Services />
       <TechStack />
       <WhyMe/>
+      <AboutPreview />
 
     </>
   );
