@@ -1,5 +1,6 @@
 import ThemeToggle from "@/components/common/ThemeToggle";
 import AboutPreview from "@/components/home/AboutPreview";
+import CTA from "@/components/home/CTA";
 import FeaturedProjects from "@/components/home/FeaturedProjects";
 import Hero from "@/components/home/Hero";
 import Services from "@/components/home/Services";
@@ -18,6 +19,7 @@ export default function HomePage() {
       <TechStack />
       <WhyMe/>
       <AboutPreview />
+      <CTA />
 
     </>
   );
