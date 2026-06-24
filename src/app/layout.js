@@ -24,6 +24,7 @@ export const metadata = {
   authors: [{ name: "Abdullah Al Masum" }],
   creator: "Abdullah Al Masum",
   metadataBase: new URL("https://masumdev.com"),
+
   openGraph: {
     title: "Abdullah Al Masum | Full Stack Developer",
     description:
@@ -31,12 +32,24 @@ export const metadata = {
     url: "https://masumdev.com",
     siteName: "MasumDev",
     type: "website",
+
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Abdullah Masum Portfolio",
+      },
+    ],
   },
+
   twitter: {
     card: "summary_large_image",
     title: "Abdullah Al Masum | Full Stack Developer",
     description:
       "Full Stack Developer building modern web applications with Next.js, React, MongoDB, and JavaScript.",
+
+    images: ["/og-image.png"],
   },
 };
 
