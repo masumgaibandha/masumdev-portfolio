@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Contact",
+  description:
+    "Contact Abdullah Masum for full-stack web development, SaaS application development, dashboard development, and modern business web applications.",
+};
 import Link from "next/link";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
 import { MdOutlineMail } from "react-icons/md";

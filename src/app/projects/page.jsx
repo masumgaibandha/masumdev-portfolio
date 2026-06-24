@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Projects",
+  description:
+    "Explore Abdullah Masum's full-stack web application projects including marketplaces, SaaS-style platforms, dashboards, and business applications.",
+};
+
 import Link from "next/link";
 import { featuredProjects } from "@/data/projects";
 

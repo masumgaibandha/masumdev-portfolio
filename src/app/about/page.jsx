@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "About",
+  description:
+    "Learn about Abdullah Masum, a Full Stack Developer focused on building modern web applications with Next.js, React, MongoDB, and scalable JavaScript architecture.",
+};
 import Link from "next/link";
 
 const AboutPage = () => {

@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Services",
+  description:
+    "Full stack development services by Abdullah Masum, including Next.js applications, SaaS platforms, dashboards, APIs, and MongoDB-backed systems.",
+};
 import Link from "next/link";
 
 const ServicesPage = () => {
