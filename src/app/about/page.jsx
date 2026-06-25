@@ -3,26 +3,16 @@ export const metadata = {
   description:
     "Learn about Abdullah Masum, a Full Stack Developer focused on building modern web applications with Next.js, React, MongoDB, and scalable JavaScript architecture.",
 };
+
+import Image from "next/image";
 import Link from "next/link";
 
 const AboutPage = () => {
   const highlights = [
-    {
-      value: "160K+",
-      label: "Freelance Earnings",
-    },
-    {
-      value: "400+",
-      label: "Projects Delivered",
-    },
-    {
-      value: "22K+",
-      label: "Hours Worked",
-    },
-    {
-      value: "Top Rated",
-      label: "Upwork & Fiverr",
-    },
+    { value: "160K+", label: "Freelance Earnings" },
+    { value: "400+", label: "Projects Delivered" },
+    { value: "22K+", label: "Hours Worked" },
+    { value: "Top Rated", label: "Upwork & Fiverr" },
   ];
 
   const timeline = [
@@ -30,19 +20,19 @@ const AboutPage = () => {
       period: "Current Focus",
       title: "Full Stack Development",
       description:
-        "Building modern web applications, SaaS platforms, dashboards, and business tools using Next.js, React, MongoDB, and scalable backend systems.",
+        "Building modern web applications, SaaS platforms, dashboards, marketplaces, and business tools using Next.js, React, MongoDB, and scalable backend systems.",
     },
     {
       period: "2024 - Present",
       title: "Web Application Development",
       description:
-        "Developed multiple full-stack and frontend applications including marketplaces, learning platforms, asset systems, and SaaS-style dashboards.",
+        "Built multiple frontend and full-stack applications including freelance marketplaces, learning platforms, asset management systems, dashboards, and e-commerce experiences.",
     },
     {
       period: "Previous Experience",
       title: "Freelance Operations & Growth Systems",
       description:
-        "Worked with hundreds of clients on Upwork and Fiverr, helping businesses with outreach systems, deliverability, lead generation, and growth operations.",
+        "Worked with hundreds of clients through Upwork and Fiverr, helping businesses with outreach systems, deliverability, lead generation, and growth operations.",
     },
   ];
 
@@ -62,20 +52,62 @@ const AboutPage = () => {
   ];
 
   return (
-    <section className="min-h-screen py-24">
-      <div className="container mx-auto px-4">
-        <div className="mx-auto max-w-4xl text-center">
-          <p className="font-medium text-cyan-400">About Me</p>
+    <section className="relative min-h-screen overflow-hidden py-24">
+      <div className="pointer-events-none absolute left-0 top-20 h-96 w-96 rounded-full bg-cyan-500/10 blur-3xl" />
+      <div className="pointer-events-none absolute bottom-20 right-0 h-96 w-96 rounded-full bg-blue-500/10 blur-3xl" />
 
-          <h1 className="mt-4 text-5xl font-bold leading-tight">
-            Full Stack Developer Building Modern Web Applications
-          </h1>
+      <div className="container relative mx-auto px-4">
+        <div className="grid items-center gap-12 lg:grid-cols-2">
+          <div>
+            <p className="font-medium text-cyan-400">About Me</p>
 
-          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[var(--muted)]">
-            I&apos;m Abdullah Masum, a Full Stack Developer focused on building
-            scalable, user-friendly, and business-focused web applications using
-            Next.js, React, MongoDB, and modern JavaScript technologies.
-          </p>
+            <h1 className="mt-4 text-4xl font-bold leading-tight md:text-6xl">
+              Full Stack Developer With Real Client Experience
+            </h1>
+
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--muted)]">
+              I&apos;m Abdullah Masum, a Full Stack Developer building modern
+              web applications with Next.js, React, MongoDB, Express.js,
+              Tailwind CSS, and scalable JavaScript architecture.
+            </p>
+
+            <p className="mt-5 max-w-2xl leading-8 text-[var(--muted)]">
+              My background combines full-stack development with years of
+              freelance client work. That helps me build applications that are
+              not only technically solid, but also practical, user-friendly, and
+              aligned with business goals.
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link
+                href="/projects"
+                className="rounded-xl bg-cyan-500 px-6 py-3 font-semibold text-white shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-600"
+              >
+                View Projects
+              </Link>
+
+              <Link
+                href="/contact"
+                className="rounded-xl border border-[var(--border)] px-6 py-3 font-semibold transition hover:border-cyan-500 hover:text-cyan-400"
+              >
+                Contact Me
+              </Link>
+            </div>
+          </div>
+
+          <div>
+            <div className="overflow-hidden rounded-[2rem] border border-[var(--border)] bg-[var(--surface)]/60 p-4 shadow-xl shadow-black/5">
+              <div className="relative aspect-square overflow-hidden rounded-[1.5rem]">
+                <Image
+                  src="/assets/masum1.jpg"
+                  alt="Abdullah Masum"
+                  fill
+                  priority
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -99,18 +131,18 @@ const AboutPage = () => {
             </h2>
 
             <p className="mt-6 leading-8 text-[var(--muted)]">
-              My professional background started with freelance client work,
-              where I helped businesses build outreach systems, improve
-              deliverability, and manage growth operations. Working with
-              hundreds of clients taught me how businesses think, what clients
-              expect, and how important clear communication is.
+              My professional journey started with freelance client work, where
+              I helped businesses with outreach systems, deliverability, lead
+              generation, and growth operations. Working with hundreds of
+              clients taught me how businesses think, what clients expect, and
+              how important clear communication is.
             </p>
 
-            <p className="mt-4 leading-8 text-[var(--muted)]">
+            <p className="mt-5 leading-8 text-[var(--muted)]">
               Today, my main focus is full stack development. I build practical
-              web applications, dashboards, marketplaces, and SaaS-style
-              platforms with clean UI, scalable architecture, and strong user
-              experience.
+              web applications, SaaS-style platforms, marketplaces, dashboards,
+              and business tools with clean UI, scalable architecture, and a
+              strong user experience.
             </p>
           </div>
 
@@ -123,7 +155,7 @@ const AboutPage = () => {
               {skills.map((skill) => (
                 <span
                   key={skill}
-                  className="rounded-full border border-[var(--border)] px-4 py-2 text-sm text-[var(--muted)]"
+                  className="rounded-full border border-[var(--border)] bg-[var(--background)]/50 px-4 py-2 text-sm text-[var(--muted)]"
                 >
                   {skill}
                 </span>
@@ -158,13 +190,13 @@ const AboutPage = () => {
           </div>
         </div>
 
-        <div className="mt-20 rounded-4xl border border-cyan-500/20 bg-cyan-500/5 p-10 text-center md:p-14">
+        <div className="mt-20 rounded-[2rem] border border-cyan-500/20 bg-cyan-500/5 p-10 text-center md:p-14">
           <h2 className="text-4xl font-bold">Let&apos;s Work Together</h2>
 
           <p className="mx-auto mt-5 max-w-2xl leading-8 text-[var(--muted)]">
             If you need a reliable developer to build a modern web application,
-            SaaS platform, or business dashboard, I&apos;d be happy to discuss
-            your project.
+            SaaS platform, marketplace, or business dashboard, I&apos;d be happy
+            to discuss your project.
           </p>
 
           <Link
