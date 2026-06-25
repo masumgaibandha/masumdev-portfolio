@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { FaGithub, FaLinkedinIn, FaUpwork } from "react-icons/fa6";
 import { MdOutlineMail } from "react-icons/md";
+import { SiFiverr } from "react-icons/si";
 
 const Footer = () => {
   const quickLinks = [
@@ -20,11 +21,19 @@ const Footer = () => {
               Masum<span className="text-[var(--primary)]">Dev</span>
             </h2>
 
-            <p className="mt-3 max-w-sm leading-7 text-[var(--muted)]">
-              Full Stack Developer building modern, scalable, and
-              conversion-focused web applications with Next.js, React, and
-              MongoDB.
+            <p className="mt-4 max-w-sm leading-7 text-[var(--muted)]">
+              Full Stack Developer building modern SaaS platforms, dashboards,
+              marketplaces, and business web applications with Next.js, React,
+              and MongoDB.
             </p>
+
+            <Link
+              href="mailto:masum@masumdev.com"
+              className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-cyan-400 transition hover:text-cyan-300"
+            >
+              <MdOutlineMail className="size-5" />
+              masum@masumdev.com
+            </Link>
           </div>
 
           <div>
@@ -37,7 +46,7 @@ const Footer = () => {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="text-sm text-[var(--muted)] transition hover:text-[var(--primary)]"
+                  className="w-fit text-sm text-[var(--muted)] transition hover:text-[var(--primary)]"
                 >
                   {link.label}
                 </Link>
@@ -48,15 +57,17 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-[var(--foreground)]">Connect</h3>
 
-            <p className="mt-4 text-sm text-[var(--muted)]">
-              Available for full-stack web development projects.
+            <p className="mt-4 max-w-sm text-sm leading-6 text-[var(--muted)]">
+              Available for full-stack web development, SaaS platforms, and
+              long-term product development work.
             </p>
 
-            <div className="mt-5 flex gap-3">
+            <div className="mt-5 flex flex-wrap gap-3">
               <Link
                 href="https://github.com/masumgaibandha"
                 target="_blank"
-                className="flex size-10 items-center justify-center rounded-xl border border-[var(--border)] text-[var(--muted)] transition hover:border-[var(--primary)] hover:text-[var(--primary)]"
+                aria-label="GitHub"
+                className="flex size-10 items-center justify-center rounded-xl border border-[var(--border)] text-[var(--muted)] transition hover:-translate-y-0.5 hover:border-[var(--primary)] hover:text-[var(--primary)]"
               >
                 <FaGithub />
               </Link>
@@ -64,14 +75,34 @@ const Footer = () => {
               <Link
                 href="https://www.linkedin.com/in/masumgaibandha"
                 target="_blank"
-                className="flex size-10 items-center justify-center rounded-xl border border-[var(--border)] text-[var(--muted)] transition hover:border-[var(--primary)] hover:text-[var(--primary)]"
+                aria-label="LinkedIn"
+                className="flex size-10 items-center justify-center rounded-xl border border-[var(--border)] text-[var(--muted)] transition hover:-translate-y-0.5 hover:border-[var(--primary)] hover:text-[var(--primary)]"
               >
                 <FaLinkedinIn />
               </Link>
 
               <Link
+                href="https://www.upwork.com/freelancers/~01a5eccfaf40a8a065?viewMode=1"
+                target="_blank"
+                aria-label="Upwork"
+                className="flex size-10 items-center justify-center rounded-xl border border-[var(--border)] text-[var(--muted)] transition hover:-translate-y-0.5 hover:border-[var(--primary)] hover:text-[var(--primary)]"
+              >
+                <FaUpwork />
+              </Link>
+
+              <Link
+                href="https://www.fiverr.com/expertlead"
+                target="_blank"
+                aria-label="Fiverr"
+                className="flex size-10 items-center justify-center rounded-xl border border-[var(--border)] text-[var(--muted)] transition hover:-translate-y-0.5 hover:border-[var(--primary)] hover:text-[var(--primary)]"
+              >
+                <SiFiverr />
+              </Link>
+
+              <Link
                 href="mailto:masum@masumdev.com"
-                className="flex size-10 items-center justify-center rounded-xl border border-[var(--border)] text-[var(--muted)] transition hover:border-[var(--primary)] hover:text-[var(--primary)]"
+                aria-label="Email"
+                className="flex size-10 items-center justify-center rounded-xl border border-[var(--border)] text-[var(--muted)] transition hover:-translate-y-0.5 hover:border-[var(--primary)] hover:text-[var(--primary)]"
               >
                 <MdOutlineMail />
               </Link>
@@ -79,8 +110,12 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-10 border-t border-[var(--border)] pt-6 text-center text-sm text-[var(--muted)]">
-          © {new Date().getFullYear()} Abdullah Masum. All rights reserved.
+        <div className="mt-10 flex flex-col gap-3 border-t border-[var(--border)] pt-6 text-sm text-[var(--muted)] md:flex-row md:items-center md:justify-between">
+          <p>
+            © {new Date().getFullYear()} Abdullah Masum. All rights reserved.
+          </p>
+
+          <p>Built with Next.js, React, MongoDB & Tailwind CSS.</p>
         </div>
       </div>
     </footer>
