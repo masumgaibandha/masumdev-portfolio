@@ -2,11 +2,13 @@
 
 import ThemeToggle from "@/components/common/ThemeToggle";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   const navLinks = [
     { label: "Home", href: "/" },
@@ -17,27 +19,37 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[var(--border)] bg-[var(--background)]/80 backdrop-blur-xl">
-      <div className="container mx-auto flex h-18 items-center justify-between px-4">
-        <Link href="/" className="flex items-center">
-          <div>
-            <h1 className="text-2xl font-bold tracking-tight text-[var(--foreground)]">
-              Masum<span className="text-[var(--primary)]">Dev</span>
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-[var(--background)]/75 backdrop-blur-2xl">
+      <div className="container mx-auto flex h-20 items-center justify-between px-4">
+        <Link href="/" className="group flex items-center gap-3">
+          <div className="leading-none">
+            <h1 className="text-2xl font-black tracking-tight text-[var(--foreground)]">
+              Masum<span className="text-cyan-400">Dev</span>
             </h1>
-            <p className="text-xs text-[var(--muted)]">Full Stack Developer</p>
+            <p className="mt-1 text-[11px] font-medium uppercase tracking-[0.28em] text-[var(--muted)]">
+              Full Stack Developer
+            </p>
           </div>
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
-          {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              className="text-sm font-medium text-[var(--muted)] transition hover:text-[var(--primary)]"
-            >
-              {link.label}
-            </Link>
-          ))}
+        <nav className="hidden items-center rounded-full border border-white/10 bg-white/[0.03] px-2 py-2 md:flex">
+          {navLinks.map((link) => {
+            const active = pathname === link.href;
+
+            return (
+              <Link
+                key={link.label}
+                href={link.href}
+                className={`rounded-full px-4 py-2 text-sm font-medium transition ${
+                  active
+                    ? "bg-cyan-400/10 text-cyan-400"
+                    : "text-[var(--muted)] hover:bg-white/[0.04] hover:text-cyan-400"
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </nav>
 
         <div className="hidden items-center gap-3 md:flex">
@@ -45,7 +57,7 @@ const Navbar = () => {
 
           <Link
             href="/contact"
-            className="rounded-xl bg-[var(--primary)] px-5 py-2 font-semibold text-white shadow-lg shadow-cyan-500/20 transition hover:bg-[var(--primary-dark)]"
+            className="rounded-full bg-cyan-500 px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-cyan-500/20 transition hover:-translate-y-0.5 hover:bg-cyan-400"
           >
             Hire Me
           </Link>
@@ -54,7 +66,7 @@ const Navbar = () => {
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
-          className="rounded-xl border border-[var(--border)] p-2 text-[var(--foreground)] md:hidden"
+          className="rounded-2xl border border-white/10 bg-white/[0.03] p-2 text-[var(--foreground)] md:hidden"
         >
           {isOpen ? (
             <HiX className="size-6" />
@@ -65,26 +77,34 @@ const Navbar = () => {
       </div>
 
       {isOpen && (
-        <div className="border-t border-[var(--border)] bg-[var(--background)] md:hidden">
+        <div className="border-t border-white/10 bg-[var(--background)]/95 backdrop-blur-xl md:hidden">
           <div className="space-y-2 px-4 py-5">
-            {navLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                onClick={() => setIsOpen(false)}
-                className="block rounded-xl px-4 py-3 text-sm font-medium text-[var(--muted)] transition hover:bg-[var(--surface)] hover:text-[var(--primary)]"
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const active = pathname === link.href;
 
-            <div className="flex items-center gap-3 border-t border-[var(--border)] pt-4">
+              return (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className={`block rounded-2xl px-4 py-3 text-sm font-medium transition ${
+                    active
+                      ? "bg-cyan-400/10 text-cyan-400"
+                      : "text-[var(--muted)] hover:bg-white/[0.04] hover:text-cyan-400"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
+
+            <div className="flex items-center gap-3 border-t border-white/10 pt-4">
               <ThemeToggle />
 
               <Link
                 href="/contact"
                 onClick={() => setIsOpen(false)}
-                className="flex-1 rounded-xl bg-[var(--primary)] px-5 py-3 text-center font-semibold text-white"
+                className="flex-1 rounded-2xl bg-cyan-500 px-5 py-3 text-center text-sm font-bold text-white"
               >
                 Hire Me
               </Link>
