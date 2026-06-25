@@ -8,27 +8,30 @@ import {
 const WhyMe = () => {
   const items = [
     {
-      title: "Production Ready Code",
+      title: "Business & Development Experience",
       description:
-        "I build maintainable, scalable, and clean applications following modern development practices.",
-      icon: HiOutlineCodeBracket,
-    },
-    {
-      title: "Business Focused",
-      description:
-        "Every feature is built with user experience, performance, and business goals in mind.",
+        "After completing 400+ freelance projects and working with businesses worldwide, I understand both technical implementation and real business requirements.",
       icon: HiOutlineRocketLaunch,
     },
+
     {
-      title: "Modern UI/UX",
+      title: "Modern Full Stack Development",
       description:
-        "Beautiful interfaces with smooth interactions, responsive layouts, and SaaS-level design.",
+        "I build modern web applications using Next.js, React, MongoDB, Express.js, Tailwind CSS, HeroUI, and scalable backend architectures.",
+      icon: HiOutlineCodeBracket,
+    },
+
+    {
+      title: "UI That Feels Premium",
+      description:
+        "I focus on creating clean, responsive, and polished interfaces that feel modern, intuitive, and production-ready across all devices.",
       icon: HiOutlineSparkles,
     },
+
     {
-      title: "Reliable Communication",
+      title: "Professional Project Delivery",
       description:
-        "Clear updates, structured workflow, and a professional collaboration experience.",
+        "Clear communication, structured workflows, reliable updates, and attention to detail ensure projects move smoothly from idea to launch.",
       icon: HiOutlineUserGroup,
     },
   ];
@@ -37,13 +40,17 @@ const WhyMe = () => {
     <section className="py-24">
       <div className="container mx-auto px-4">
         <div className="mb-14 text-center">
-          <p className="font-medium text-cyan-400">Why Choose Me</p>
+          <p className="font-medium text-cyan-400">Why Work With Me</p>
 
-          <h2 className="mt-4 text-4xl font-bold">More Than Just Coding</h2>
+          <h2 className="mt-4 text-4xl font-bold">
+            Building Products With Business Context
+          </h2>
 
-          <p className="mx-auto mt-4 max-w-2xl text-[var(--muted)]">
-            I help businesses turn ideas into polished products with a focus on
-            performance, usability, and long-term maintainability.
+          <p className="mx-auto mt-4 max-w-3xl text-[var(--muted)]">
+            My background combines freelance business experience with modern
+            full-stack development, allowing me to build applications that are
+            not only functional but also aligned with real business goals and
+            user needs.
           </p>
         </div>
 
