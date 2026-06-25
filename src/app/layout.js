@@ -2,6 +2,7 @@ import "./globals.css";
 import ThemeProvider from "@/providers/ThemeProvider";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { Toaster } from "react-hot-toast";
 
 export const metadata = {
   title: {
@@ -61,6 +62,7 @@ export default function RootLayout({ children }) {
           <Navbar />
           <main>{children}</main>
           <Footer />
+          <Toaster position="top-center" />
         </ThemeProvider>
       </body>
     </html>

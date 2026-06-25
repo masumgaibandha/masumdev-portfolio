@@ -4,6 +4,7 @@ export const metadata = {
     "Contact Abdullah Masum for full-stack web development, SaaS application development, dashboard development, and modern business web applications.",
 };
 
+import ContactForm from "@/components/contact/ContactForm";
 import Link from "next/link";
 import { FaGithub, FaLinkedinIn, FaUpwork } from "react-icons/fa6";
 import { MdOutlineMail, MdOutlineLocationOn } from "react-icons/md";
@@ -43,53 +44,12 @@ const ContactPage = () => {
               <h2 className="text-3xl font-bold">Project Inquiry</h2>
 
               <p className="mt-4 leading-7 text-[var(--muted)]">
-                Tell me what you want to build. This form is currently UI-only;
-                next we can connect it to email or MongoDB.
+                Tell me about your project, goals, and requirements. I'll review
+                the details and get back to you as soon as possible.
               </p>
             </div>
 
-            <form className="grid gap-5">
-              <div className="grid gap-5 md:grid-cols-2">
-                <input
-                  type="text"
-                  placeholder="Your Name"
-                  className="rounded-xl border border-[var(--border)] bg-[var(--background)] px-4 py-3 outline-none transition focus:border-cyan-500"
-                />
-
-                <input
-                  type="email"
-                  placeholder="Email Address"
-                  className="rounded-xl border border-[var(--border)] bg-[var(--background)] px-4 py-3 outline-none transition focus:border-cyan-500"
-                />
-              </div>
-
-              <div className="grid gap-5 md:grid-cols-2">
-                <input
-                  type="text"
-                  placeholder="Project Type"
-                  className="rounded-xl border border-[var(--border)] bg-[var(--background)] px-4 py-3 outline-none transition focus:border-cyan-500"
-                />
-
-                <input
-                  type="text"
-                  placeholder="Estimated Budget"
-                  className="rounded-xl border border-[var(--border)] bg-[var(--background)] px-4 py-3 outline-none transition focus:border-cyan-500"
-                />
-              </div>
-
-              <textarea
-                rows={7}
-                placeholder="Tell me about your project..."
-                className="resize-none rounded-xl border border-[var(--border)] bg-[var(--background)] px-4 py-3 outline-none transition focus:border-cyan-500"
-              />
-
-              <button
-                type="button"
-                className="rounded-xl bg-cyan-500 px-6 py-4 font-semibold text-white shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-600"
-              >
-                Send Message
-              </button>
-            </form>
+            <ContactForm />
           </div>
 
           <div className="grid gap-6">
