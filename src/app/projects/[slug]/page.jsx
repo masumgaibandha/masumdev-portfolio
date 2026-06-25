@@ -1,4 +1,5 @@
 import { getProjectBySlug } from "@/data/projects";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -11,8 +12,11 @@ const ProjectDetailsPage = async ({ params }) => {
   }
 
   return (
-    <section className="min-h-screen py-24">
-      <div className="container mx-auto px-4">
+    <section className="relative min-h-screen overflow-hidden py-24">
+      <div className="pointer-events-none absolute left-0 top-20 h-96 w-96 rounded-full bg-cyan-500/10 blur-3xl" />
+      <div className="pointer-events-none absolute bottom-20 right-0 h-96 w-96 rounded-full bg-blue-500/10 blur-3xl" />
+
+      <div className="container relative mx-auto px-4">
         <Link
           href="/projects"
           className="inline-flex rounded-xl border border-[var(--border)] px-4 py-2 text-sm font-medium text-[var(--muted)] transition hover:border-cyan-500 hover:text-cyan-400"
@@ -20,12 +24,12 @@ const ProjectDetailsPage = async ({ params }) => {
           ← Back to Projects
         </Link>
 
-        <div className="mt-10 rounded-3xl border border-[var(--border)] bg-[var(--surface)]/50 p-8 md:p-10">
-          <span className="rounded-full bg-cyan-500/10 px-3 py-1 text-sm text-cyan-400">
+        <div className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--surface)]/60 p-8 shadow-xl shadow-black/5 md:p-10">
+          <span className="inline-flex rounded-full border border-cyan-500/20 bg-cyan-500/10 px-4 py-2 text-sm font-semibold text-cyan-400">
             {project.category}
           </span>
 
-          <h1 className="mt-6 text-5xl font-bold leading-tight">
+          <h1 className="mt-6 max-w-4xl text-4xl font-bold leading-tight md:text-6xl">
             {project.title}
           </h1>
 
@@ -52,17 +56,51 @@ const ProjectDetailsPage = async ({ params }) => {
           </div>
         </div>
 
+        <div className="mt-8 overflow-hidden rounded-[2rem] border border-[var(--border)] bg-[var(--surface)]/50 p-3 md:p-4">
+          <div className="relative h-[260px] overflow-hidden rounded-[1.5rem] md:h-[360px] lg:h-[430px]">
+            <Image
+              src={project.image}
+              alt={project.title}
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover object-top"
+            />
+          </div>
+        </div>
+
+        <div className="mt-8 grid gap-6 md:grid-cols-3">
+          <div className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/50 p-6">
+            <p className="text-sm text-[var(--muted)]">Project Type</p>
+            <h3 className="mt-2 text-xl font-semibold">{project.category}</h3>
+          </div>
+
+          <div className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/50 p-6">
+            <p className="text-sm text-[var(--muted)]">Technologies</p>
+            <h3 className="mt-2 text-xl font-semibold">
+              {project.stack.length} Tools
+            </h3>
+          </div>
+
+          <div className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/50 p-6">
+            <p className="text-sm text-[var(--muted)]">Features</p>
+            <h3 className="mt-2 text-xl font-semibold">
+              {project.features.length}+ Features
+            </h3>
+          </div>
+        </div>
+
         <div className="mt-8 grid gap-6 lg:grid-cols-2">
           <div className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/50 p-8">
             <h2 className="text-2xl font-bold">Problem</h2>
-            <p className="mt-4 leading-8 text-[var(--muted)]">
+            <p className="mt-5 leading-8 text-[var(--muted)]">
               {project.problem}
             </p>
           </div>
 
           <div className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/50 p-8">
             <h2 className="text-2xl font-bold">Solution</h2>
-            <p className="mt-4 leading-8 text-[var(--muted)]">
+            <p className="mt-5 leading-8 text-[var(--muted)]">
               {project.solution}
             </p>
           </div>
@@ -72,13 +110,10 @@ const ProjectDetailsPage = async ({ params }) => {
           <div className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/50 p-8">
             <h2 className="text-2xl font-bold">Core Features</h2>
 
-            <ul className="mt-5 space-y-3">
+            <ul className="mt-6 space-y-4">
               {project.features.map((feature) => (
-                <li
-                  key={feature}
-                  className="flex gap-3 leading-7 text-[var(--muted)]"
-                >
-                  <span className="mt-1 text-cyan-400">✓</span>
+                <li key={feature} className="flex gap-3 text-[var(--muted)]">
+                  <span className="text-cyan-400">✓</span>
                   <span>{feature}</span>
                 </li>
               ))}
@@ -86,13 +121,13 @@ const ProjectDetailsPage = async ({ params }) => {
           </div>
 
           <div className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/50 p-8">
-            <h2 className="text-2xl font-bold">Tech Stack</h2>
+            <h2 className="text-2xl font-bold">Technology Stack</h2>
 
-            <div className="mt-5 flex flex-wrap gap-2">
+            <div className="mt-6 flex flex-wrap gap-3">
               {project.stack.map((item) => (
                 <span
                   key={item}
-                  className="rounded-full border border-[var(--border)] px-3 py-1 text-sm"
+                  className="rounded-full border border-[var(--border)] bg-[var(--background)]/50 px-4 py-2 text-sm text-[var(--muted)]"
                 >
                   {item}
                 </span>
