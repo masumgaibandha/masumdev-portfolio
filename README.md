@@ -1,36 +1,179 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# MasumDev Portfolio
 
-## Getting Started
+A modern full-stack developer portfolio built with Next.js, React, MongoDB, HeroUI, and Tailwind CSS.
 
-First, run the development server:
+## Live Demo
+
+https://masumdev.com
+
+## Features
+
+- Modern SaaS-inspired UI
+- Responsive Design
+- Dark Mode Support
+- Project Showcase
+- Detailed Case Studies
+- Contact Form Integration
+- Resume Download
+- SEO Optimized
+- Fast Performance
+- Mobile Friendly
+
+## Pages
+
+### Home
+
+- Hero Section
+- Featured Projects
+- Services
+- Tech Stack
+- Why Work With Me
+- About Preview
+- Contact CTA
+
+### Projects
+
+- Project Listing
+- Project Categories
+- Project Details Pages
+- Live Demo Links
+- GitHub Repository Links
+
+### Services
+
+- Full Stack Development
+- SaaS Product Development
+- Frontend Development
+- Backend & API Development
+
+### About
+
+- Professional Journey
+- Skills & Technologies
+- Experience Highlights
+- Career Timeline
+
+### Contact
+
+- Contact Form
+- Social Links
+- Availability Information
+
+## Tech Stack
+
+### Frontend
+
+- Next.js 16
+- React 19
+- JavaScript
+- Tailwind CSS 4
+- HeroUI
+- React Icons
+
+### Form Handling
+
+- Web3Forms
+
+### Deployment
+
+- Vercel
+
+## Project Structure
+
+```bash
+src
+│
+├── app
+│   ├── about
+│   ├── contact
+│   ├── projects
+│   ├── services
+│   └── page.jsx
+│
+├── components
+│   ├── common
+│   ├── home
+│   └── layout
+│
+├── data
+│   └── projects.js
+│
+├── hooks
+│
+└── lib
+
+public
+│
+├── assets
+├── projects
+├── favicon.ico
+└── Abdullah-Masum-Resume.pdf
+```
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/masumdev-portfolio.git
+```
+
+Move into the project:
+
+```bash
+cd masumdev-portfolio
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run locally:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Environment Variables
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Create a `.env.local` file:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```env
+NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY=YOUR_ACCESS_KEY
+```
 
-## Learn More
+## Build
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deploy
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Recommended deployment platform:
 
-## Deploy on Vercel
+- Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Author
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Abdullah Masum
+
+Full Stack Developer
+
+Website:
+https://masumdev.com
+
+LinkedIn:
+https://linkedin.com/in/masumgaibandha
+
+GitHub:
+https://github.com/masumgaibandha
+
+Email:
+masum@masumdev.com
+
+## License
+
+This project is licensed under the MIT License.
