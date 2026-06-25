@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="container relative mx-auto px-4">
         <div className="mx-auto max-w-5xl text-center">
           <div className="mb-6 inline-flex rounded-full border border-cyan-500/20 bg-cyan-500/10 px-4 py-2 text-sm font-medium text-cyan-400">
-            Full Stack Developer • 160K+ Earnings • 400+ Projects
+            Top Rated Freelancer • 160K+ Earnings • 400+ Projects Delivered
           </div>
 
           <h1 className="text-4xl font-bold leading-tight tracking-tight md:text-6xl lg:text-7xl">
@@ -19,9 +19,9 @@ const Hero = () => {
           </h1>
 
           <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-[var(--muted)] md:text-xl">
-            I&apos;m Abdullah Masum, a Full Stack Developer building modern web
-            applications with Next.js, React, MongoDB, and scalable JavaScript
-            architecture.
+            I build modern SaaS platforms, dashboards, marketplaces, and
+            business applications using Next.js, React, MongoDB, and scalable
+            backend architecture.
           </p>
 
           <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
@@ -33,10 +33,11 @@ const Hero = () => {
             </Link>
 
             <Link
-              href="/contact"
+              href="/Abdullah-Masum-Resume.pdf"
+              target="_blank"
               className="rounded-xl border border-[var(--border)] px-8 py-4 font-semibold transition hover:border-cyan-500 hover:text-cyan-400"
             >
-              Hire Me
+              Download Resume
             </Link>
           </div>
         </div>
