@@ -17,7 +17,7 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-700 bg-slate-900 text-slate-300 transition hover:border-cyan-500 hover:text-cyan-400 dark:bg-slate-900 dark:text-slate-300"
+      className="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-700 bg-slate-900 text-slate-300 transition hover:border-[var(--primary)] hover:text-[var(--primary)] dark:bg-slate-900 dark:text-slate-300"
     >
       {theme === "dark" ? (
         <Sun className="size-5" />

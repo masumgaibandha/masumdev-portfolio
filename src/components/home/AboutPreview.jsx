@@ -20,26 +20,26 @@ const AboutPreview = () => {
 
             <div className="mt-6 grid grid-cols-2 gap-4">
               <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)]/50 p-5">
-                <h3 className="text-3xl font-bold text-cyan-400">400+</h3>
+                <h3 className="text-3xl font-bold text-[var(--primary)]">400+</h3>
                 <p className="mt-2 text-sm text-[var(--muted)]">
                   Freelance Projects
                 </p>
               </div>
 
               <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)]/50 p-5">
-                <h3 className="text-3xl font-bold text-cyan-400">160K+</h3>
+                <h3 className="text-3xl font-bold text-[var(--primary)]">160K+</h3>
                 <p className="mt-2 text-sm text-[var(--muted)]">
                   Career Earnings
                 </p>
               </div>
 
               <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)]/50 p-5">
-                <h3 className="text-3xl font-bold text-cyan-400">22K+</h3>
+                <h3 className="text-3xl font-bold text-[var(--primary)]">22K+</h3>
                 <p className="mt-2 text-sm text-[var(--muted)]">Hours Worked</p>
               </div>
 
               <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)]/50 p-5">
-                <h3 className="text-3xl font-bold text-cyan-400">Top Rated</h3>
+                <h3 className="text-3xl font-bold text-[var(--primary)]">Top Rated</h3>
                 <p className="mt-2 text-sm text-[var(--muted)]">
                   Upwork & Fiverr
                 </p>
@@ -48,7 +48,7 @@ const AboutPreview = () => {
           </div>
 
           <div>
-            <p className="font-medium text-cyan-400">About Me</p>
+            <p className="font-medium text-[var(--primary)]">About Me</p>
 
             <h2 className="mt-4 text-4xl font-bold leading-tight md:text-5xl">
               Building Modern Products With Business Experience
@@ -75,7 +75,7 @@ const AboutPreview = () => {
 
             <Link
               href="/about"
-              className="mt-8 inline-flex rounded-xl bg-cyan-500 px-6 py-3 font-semibold text-white shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-600"
+              className="mt-8 inline-flex rounded-xl bg-[var(--primary)] px-6 py-3 font-semibold text-white shadow-lg shadow-pink-500/20 transition hover:bg-[var(--primary-dark)]"
             >
               Learn More About Me
             </Link>

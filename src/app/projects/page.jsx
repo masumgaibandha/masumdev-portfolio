@@ -11,12 +11,12 @@ import Link from "next/link";
 const ProjectsPage = () => {
   return (
     <section className="relative min-h-screen overflow-hidden py-24">
-      <div className="pointer-events-none absolute left-0 top-20 h-96 w-96 rounded-full bg-cyan-500/10 blur-3xl" />
+      <div className="pointer-events-none absolute left-0 top-20 h-96 w-96 rounded-full bg-[var(--primary)]/10 blur-3xl" />
       <div className="pointer-events-none absolute bottom-40 right-0 h-96 w-96 rounded-full bg-blue-500/10 blur-3xl" />
 
       <div className="container relative mx-auto px-4">
         <div className="mx-auto mb-16 max-w-3xl text-center">
-          <p className="inline-flex rounded-full border border-cyan-500/20 bg-cyan-500/10 px-4 py-2 text-sm font-semibold text-cyan-400">
+          <p className="inline-flex rounded-full border border-[var(--primary)]/20 bg-[var(--primary)]/10 px-4 py-2 text-sm font-semibold text-[var(--primary)]">
             Projects
           </p>
 
@@ -35,7 +35,7 @@ const ProjectsPage = () => {
           {featuredProjects.map((project) => (
             <article
               key={project.id}
-              className="group flex h-full flex-col overflow-hidden rounded-[2rem] border border-[var(--border)] bg-[var(--surface)]/60 shadow-xl shadow-black/5 transition-all duration-500 hover:-translate-y-2 hover:border-cyan-500/50 hover:shadow-2xl hover:shadow-cyan-500/10"
+              className="group flex h-full flex-col overflow-hidden rounded-[2rem] border border-[var(--border)] bg-[var(--surface)]/60 shadow-xl shadow-black/5 transition-all duration-500 hover:-translate-y-2 hover:border-[var(--primary)]/50 hover:shadow-2xl hover:shadow-cyan-500/10"
             >
               <div className="p-3">
                 <div className="relative overflow-hidden rounded-[1.5rem] border border-[var(--border)] bg-slate-950">
@@ -54,7 +54,7 @@ const ProjectsPage = () => {
               </div>
 
               <div className="flex flex-1 flex-col px-6 pb-7 pt-4 md:px-8">
-                <span className="w-fit rounded-full border border-cyan-500/20 bg-cyan-500/10 px-3 py-1 text-xs font-semibold text-cyan-400">
+                <span className="w-fit rounded-full border border-[var(--primary)]/20 bg-[var(--primary)]/10 px-3 py-1 text-xs font-semibold text-[var(--primary)]">
                   {project.category}
                 </span>
 
@@ -80,7 +80,7 @@ const ProjectsPage = () => {
                 <div className="mt-auto pt-8">
                   <Link
                     href={`/projects/${project.slug}`}
-                    className="inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-5 py-3 text-sm font-semibold text-cyan-400 transition duration-300 hover:border-cyan-500 hover:bg-cyan-500 hover:text-white"
+                    className="inline-flex items-center gap-2 rounded-full border border-[var(--primary)]/30 bg-[var(--primary)]/10 px-5 py-3 text-sm font-semibold text-[var(--primary)] transition duration-300 hover:border-[var(--primary)] hover:bg-[var(--primary)] hover:text-white"
                   >
                     View Case Study
                     <span className="transition duration-300 group-hover:translate-x-1">

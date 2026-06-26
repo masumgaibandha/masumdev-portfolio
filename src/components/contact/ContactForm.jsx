@@ -83,7 +83,7 @@ const ContactForm = () => {
       <button
         type="submit"
         disabled={loading}
-        className="rounded-xl bg-cyan-500 px-6 py-4 font-semibold text-white cursor-pointer"
+        className="rounded-xl bg-[var(--primary)] px-6 py-4 font-semibold text-white cursor-pointer"
       >
         {loading ? "Sending..." : "Send Message"}
       </button>

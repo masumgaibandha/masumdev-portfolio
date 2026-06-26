@@ -54,7 +54,7 @@ const Services = () => {
     <section className="py-24">
       <div className="container mx-auto px-4">
         <div className="mb-16 max-w-3xl">
-          <p className="font-medium text-cyan-400">Services</p>
+          <p className="font-medium text-[var(--primary)]">Services</p>
 
           <h2 className="mt-4 text-4xl font-bold md:text-5xl">
             Building Products That Solve Real Business Problems
@@ -70,7 +70,7 @@ const Services = () => {
           {services.map((service) => (
             <div
               key={service.title}
-              className="group rounded-[2rem] border border-[var(--border)] bg-[var(--surface)]/50 p-8 transition-all duration-300 hover:border-cyan-500/40 hover:bg-[var(--surface)]/80"
+              className="group rounded-[2rem] border border-[var(--border)] bg-[var(--surface)]/50 p-8 transition-all duration-300 hover:border-[var(--primary)]/40 hover:bg-[var(--surface)]/80"
             >
               <div className="grid gap-8 lg:grid-cols-[120px_1fr_350px] lg:items-center">
                 <div>

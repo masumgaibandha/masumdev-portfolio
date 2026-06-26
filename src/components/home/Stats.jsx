@@ -25,9 +25,9 @@ const Stats = () => {
           {stats.map((item) => (
             <div
               key={item.label}
-              className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/50 p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/10"
+              className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/50 p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[var(--primary)]/50 hover:shadow-lg hover:shadow-cyan-500/10"
             >
-              <h3 className="text-4xl font-bold text-cyan-400 transition-colors duration-300">{item.value}</h3>
+              <h3 className="text-4xl font-bold text-[var(--primary)] transition-colors duration-300">{item.value}</h3>
 
               <p className="mt-3 text-sm text-[var(--muted)]">{item.label}</p>
             </div>

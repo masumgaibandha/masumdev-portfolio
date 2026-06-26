@@ -4,8 +4,8 @@ const CTA = () => {
   return (
     <section className="py-24">
       <div className="container mx-auto px-4">
-        <div className="rounded-4xl border border-cyan-500/20 bg-cyan-500/5 p-10 text-center md:p-16">
-          <p className="font-medium text-cyan-400">
+        <div className="rounded-4xl border border-[var(--primary)]/20 bg-[var(--primary)]/5 p-10 text-center md:p-16">
+          <p className="font-medium text-[var(--primary)]">
             Let's Build Something Great
           </p>
 
@@ -22,14 +22,14 @@ const CTA = () => {
           <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
             <Link
               href="/contact"
-              className="rounded-xl bg-cyan-500 px-8 py-4 font-semibold text-white shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-600"
+              className="rounded-xl bg-[var(--primary)] px-8 py-4 font-semibold text-white shadow-lg shadow-pink-500/20 transition hover:bg-[var(--primary-dark)]"
             >
               Start a Conversation
             </Link>
 
             <Link
               href="/projects"
-              className="rounded-xl border border-[var(--border)] px-8 py-4 font-semibold transition hover:border-cyan-500 hover:text-cyan-400"
+              className="rounded-xl border border-[var(--border)] px-8 py-4 font-semibold transition hover:border-[var(--primary)] hover:text-[var(--primary)]"
             >
               View My Work
             </Link>

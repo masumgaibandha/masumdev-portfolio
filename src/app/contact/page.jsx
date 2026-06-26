@@ -21,12 +21,12 @@ const ContactPage = () => {
 
   return (
     <section className="relative min-h-screen overflow-hidden py-24">
-      <div className="pointer-events-none absolute left-0 top-20 h-96 w-96 rounded-full bg-cyan-500/10 blur-3xl" />
+      <div className="pointer-events-none absolute left-0 top-20 h-96 w-96 rounded-full bg-[var(--primary)]/10 blur-3xl" />
       <div className="pointer-events-none absolute bottom-20 right-0 h-96 w-96 rounded-full bg-blue-500/10 blur-3xl" />
 
       <div className="container relative mx-auto px-4">
         <div className="mx-auto mb-16 max-w-3xl text-center">
-          <p className="font-medium text-cyan-400">Contact</p>
+          <p className="font-medium text-[var(--primary)]">Contact</p>
 
           <h1 className="mt-4 text-4xl font-bold leading-tight md:text-6xl">
             Let&apos;s Build Your Next Web Application
@@ -59,56 +59,56 @@ const ContactPage = () => {
               <div className="mt-6 grid gap-4">
                 <Link
                   href="mailto:masum@masumdev.com"
-                  className="flex items-center gap-3 text-[var(--muted)] transition hover:text-cyan-400"
+                  className="flex items-center gap-3 text-[var(--muted)] transition hover:text-[var(--primary)]"
                 >
-                  <MdOutlineMail className="size-5 text-cyan-400" />
+                  <MdOutlineMail className="size-5 text-[var(--primary)]" />
                   masum@masumdev.com
                 </Link>
 
                 <div className="flex items-center gap-3 text-[var(--muted)]">
-                  <MdOutlineLocationOn className="size-5 text-cyan-400" />
+                  <MdOutlineLocationOn className="size-5 text-[var(--primary)]" />
                   Bangladesh · Available Worldwide
                 </div>
 
                 <Link
                   href="https://github.com/masumgaibandha"
                   target="_blank"
-                  className="flex items-center gap-3 text-[var(--muted)] transition hover:text-cyan-400"
+                  className="flex items-center gap-3 text-[var(--muted)] transition hover:text-[var(--primary)]"
                 >
-                  <FaGithub className="size-5 text-cyan-400" />
+                  <FaGithub className="size-5 text-[var(--primary)]" />
                   GitHub
                 </Link>
 
                 <Link
                   href="https://www.linkedin.com/in/masumgaibandha"
                   target="_blank"
-                  className="flex items-center gap-3 text-[var(--muted)] transition hover:text-cyan-400"
+                  className="flex items-center gap-3 text-[var(--muted)] transition hover:text-[var(--primary)]"
                 >
-                  <FaLinkedinIn className="size-5 text-cyan-400" />
+                  <FaLinkedinIn className="size-5 text-[var(--primary)]" />
                   LinkedIn
                 </Link>
 
                 <Link
                   href="https://www.upwork.com/freelancers/~01a5eccfaf40a8a065?viewMode=1"
                   target="_blank"
-                  className="flex items-center gap-3 text-[var(--muted)] transition hover:text-cyan-400"
+                  className="flex items-center gap-3 text-[var(--muted)] transition hover:text-[var(--primary)]"
                 >
-                  <FaUpwork className="size-5 text-cyan-400" />
+                  <FaUpwork className="size-5 text-[var(--primary)]" />
                   Upwork Profile
                 </Link>
 
                 <Link
                   href="https://www.fiverr.com/expertlead"
                   target="_blank"
-                  className="flex items-center gap-3 text-[var(--muted)] transition hover:text-cyan-400"
+                  className="flex items-center gap-3 text-[var(--muted)] transition hover:text-[var(--primary)]"
                 >
-                  <SiFiverr className="size-5 text-cyan-400" />
+                  <SiFiverr className="size-5 text-[var(--primary)]" />
                   Fiverr Profile
                 </Link>
               </div>
             </div>
 
-            <div className="rounded-[2rem] border border-cyan-500/20 bg-cyan-500/5 p-6 md:p-8">
+            <div className="rounded-[2rem] border border-[var(--primary)]/20 bg-[var(--primary)]/5 p-6 md:p-8">
               <h2 className="text-3xl font-bold">Available for Work</h2>
 
               <p className="mt-4 leading-8 text-[var(--muted)]">
@@ -124,7 +124,7 @@ const ContactPage = () => {
               <ul className="mt-5 space-y-3 text-[var(--muted)]">
                 {bestFitProjects.map((project) => (
                   <li key={project} className="flex gap-3">
-                    <span className="text-cyan-400">✓</span>
+                    <span className="text-[var(--primary)]">✓</span>
                     <span>{project}</span>
                   </li>
                 ))}

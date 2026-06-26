@@ -11,11 +11,11 @@ const FeaturedProjects = ({ projects }) => {
 
   return (
     <section className="relative overflow-hidden py-24">
-      <div className="pointer-events-none absolute left-0 top-20 h-96 w-96 rounded-full bg-cyan-500/10 blur-3xl" />
+      <div className="pointer-events-none absolute left-0 top-20 h-96 w-96 rounded-full bg-[var(--primary)]/10 blur-3xl" />
 
       <div className="container relative mx-auto px-4">
         <div className="mb-14 text-center">
-          <p className="font-medium text-cyan-400">Featured Work</p>
+          <p className="font-medium text-[var(--primary)]">Featured Work</p>
 
           <h2 className="mt-4 text-4xl font-bold">Recent Projects</h2>
 
@@ -25,7 +25,7 @@ const FeaturedProjects = ({ projects }) => {
           </p>
         </div>
 
-        <div className="overflow-hidden rounded-[2rem] border border-[var(--border)] bg-[var(--surface)]/60 p-4 shadow-xl shadow-black/5 transition-all duration-300 hover:border-cyan-500/50 hover:shadow-cyan-500/10 lg:p-5">
+        <div className="overflow-hidden rounded-[2rem] border border-[var(--border)] bg-[var(--surface)]/60 p-4 shadow-xl shadow-black/5 transition-all duration-300 hover:border-[var(--primary)]/50 hover:shadow-cyan-500/10 lg:p-5">
           <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
             <div className="relative aspect-[16/10] overflow-hidden rounded-[1.5rem] border border-[var(--border)] bg-slate-950">
               <Image
@@ -38,7 +38,7 @@ const FeaturedProjects = ({ projects }) => {
             </div>
 
             <div className="p-3 lg:p-6">
-              <span className="inline-flex rounded-full border border-cyan-500/20 bg-cyan-500/10 px-4 py-2 text-sm font-semibold text-cyan-400">
+              <span className="inline-flex rounded-full border border-[var(--primary)]/20 bg-[var(--primary)]/10 px-4 py-2 text-sm font-semibold text-[var(--primary)]">
                 Featured Project
               </span>
 
@@ -64,7 +64,7 @@ const FeaturedProjects = ({ projects }) => {
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link
                   href={`/projects/${mainProject.slug}`}
-                  className="rounded-xl bg-cyan-500 px-6 py-3 font-semibold text-white shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-600"
+                  className="rounded-xl bg-[var(--primary)] px-6 py-3 font-semibold text-white shadow-lg shadow-pink-500/20 transition hover:bg-[var(--primary-dark)]"
                 >
                   View Case Study
                 </Link>
@@ -72,7 +72,7 @@ const FeaturedProjects = ({ projects }) => {
                 <Link
                   href={mainProject.liveLink}
                   target="_blank"
-                  className="rounded-xl border border-[var(--border)] px-6 py-3 font-semibold transition hover:border-cyan-500 hover:text-cyan-400"
+                  className="rounded-xl border border-[var(--border)] px-6 py-3 font-semibold transition hover:border-[var(--primary)] hover:text-[var(--primary)]"
                 >
                   Live Preview
                 </Link>
@@ -85,7 +85,7 @@ const FeaturedProjects = ({ projects }) => {
           {secondaryProjects.map((project) => (
             <div
               key={project.id}
-              className="group flex h-full flex-col overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--surface)]/50 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/10"
+              className="group flex h-full flex-col overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--surface)]/50 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--primary)]/50 hover:shadow-lg hover:shadow-cyan-500/10"
             >
               <div className="relative aspect-[16/10] overflow-hidden border-b border-[var(--border)] bg-slate-950">
                 <Image
@@ -98,7 +98,7 @@ const FeaturedProjects = ({ projects }) => {
               </div>
 
               <div className="flex flex-1 flex-col p-6">
-                <span className="w-fit rounded-full bg-cyan-500/10 px-3 py-1 text-xs font-medium text-cyan-400">
+                <span className="w-fit rounded-full bg-[var(--primary)]/10 px-3 py-1 text-xs font-medium text-[var(--primary)]">
                   {project.category}
                 </span>
 
@@ -110,7 +110,7 @@ const FeaturedProjects = ({ projects }) => {
 
                 <Link
                   href={`/projects/${project.slug}`}
-                  className="mt-auto inline-flex pt-6 text-sm font-semibold text-cyan-400 transition group-hover:translate-x-1"
+                  className="mt-auto inline-flex pt-6 text-sm font-semibold text-[var(--primary)] transition group-hover:translate-x-1"
                 >
                   View Case Study →
                 </Link>
@@ -122,7 +122,7 @@ const FeaturedProjects = ({ projects }) => {
         <div className="mt-12 text-center">
           <Link
             href="/projects"
-            className="rounded-xl border border-[var(--border)] px-6 py-3 font-medium transition hover:border-cyan-500 hover:text-cyan-400"
+            className="rounded-xl border border-[var(--border)] px-6 py-3 font-medium transition hover:border-[var(--primary)] hover:text-[var(--primary)]"
           >
             View All Projects
           </Link>

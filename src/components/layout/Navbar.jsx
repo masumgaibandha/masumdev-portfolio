@@ -24,7 +24,7 @@ const Navbar = () => {
         <Link href="/" className="group flex items-center gap-3">
           <div className="leading-none">
             <h1 className="text-2xl font-black tracking-tight text-[var(--foreground)]">
-              Masum<span className="text-cyan-400">Dev</span>
+              Masum<span className="text-[var(--primary)]">Dev</span>
             </h1>
             <p className="mt-1 text-[11px] font-medium uppercase tracking-[0.28em] text-[var(--muted)]">
               Full Stack Developer
@@ -42,8 +42,8 @@ const Navbar = () => {
                 href={link.href}
                 className={`rounded-full px-4 py-2 text-sm font-medium transition ${
                   active
-                    ? "bg-cyan-400/10 text-cyan-400"
-                    : "text-[var(--muted)] hover:bg-white/[0.04] hover:text-cyan-400"
+                    ? "bg-cyan-400/10 text-[var(--primary)]"
+                    : "text-[var(--muted)] hover:bg-white/[0.04] hover:text-[var(--primary)]"
                 }`}
               >
                 {link.label}
@@ -57,7 +57,7 @@ const Navbar = () => {
 
           <Link
             href="/contact"
-            className="rounded-full bg-cyan-500 px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-cyan-500/20 transition hover:-translate-y-0.5 hover:bg-cyan-400"
+            className="rounded-full bg-[var(--primary)] px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-pink-500/20 transition hover:-translate-y-0.5 hover:bg-cyan-400"
           >
             Hire Me
           </Link>
@@ -89,8 +89,8 @@ const Navbar = () => {
                   onClick={() => setIsOpen(false)}
                   className={`block rounded-2xl px-4 py-3 text-sm font-medium transition ${
                     active
-                      ? "bg-cyan-400/10 text-cyan-400"
-                      : "text-[var(--muted)] hover:bg-white/[0.04] hover:text-cyan-400"
+                      ? "bg-cyan-400/10 text-[var(--primary)]"
+                      : "text-[var(--muted)] hover:bg-white/[0.04] hover:text-[var(--primary)]"
                   }`}
                 >
                   {link.label}
@@ -104,7 +104,7 @@ const Navbar = () => {
               <Link
                 href="/contact"
                 onClick={() => setIsOpen(false)}
-                className="flex-1 rounded-2xl bg-cyan-500 px-5 py-3 text-center text-sm font-bold text-white"
+                className="flex-1 rounded-2xl bg-[var(--primary)] px-5 py-3 text-center text-sm font-bold text-white"
               >
                 Hire Me
               </Link>

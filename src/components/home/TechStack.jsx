@@ -26,7 +26,7 @@ const TechStack = () => {
       <div className="container mx-auto px-4">
         <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
           <div>
-            <p className="font-medium text-cyan-400">Tech Stack</p>
+            <p className="font-medium text-[var(--primary)]">Tech Stack</p>
 
             <h2 className="mt-4 text-4xl font-bold leading-tight md:text-5xl">
               Tools I Use to Build Modern Web Products
@@ -42,9 +42,9 @@ const TechStack = () => {
             {technologies.map((tech) => (
               <div
                 key={tech.name}
-                className="group flex items-center gap-4 rounded-2xl border border-[var(--border)] bg-[var(--surface)]/50 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/10"
+                className="group flex items-center gap-4 rounded-2xl border border-[var(--border)] bg-[var(--surface)]/50 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--primary)]/50 hover:shadow-lg hover:shadow-cyan-500/10"
               >
-                <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-cyan-500/10 text-cyan-400">
+                <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-[var(--primary)]/10 text-[var(--primary)]">
                   <tech.icon className="size-6" />
                 </div>
 

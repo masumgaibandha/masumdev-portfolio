@@ -29,7 +29,7 @@ const Footer = () => {
 
             <Link
               href="mailto:masum@masumdev.com"
-              className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-cyan-400 transition hover:text-cyan-300"
+              className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-[var(--primary)] transition hover:text-cyan-300"
             >
               <MdOutlineMail className="size-5" />
               masum@masumdev.com

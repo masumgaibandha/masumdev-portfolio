@@ -13,19 +13,19 @@ const ProjectDetailsPage = async ({ params }) => {
 
   return (
     <section className="relative min-h-screen overflow-hidden py-24">
-      <div className="pointer-events-none absolute left-0 top-20 h-96 w-96 rounded-full bg-cyan-500/10 blur-3xl" />
+      <div className="pointer-events-none absolute left-0 top-20 h-96 w-96 rounded-full bg-[var(--primary)]/10 blur-3xl" />
       <div className="pointer-events-none absolute bottom-20 right-0 h-96 w-96 rounded-full bg-blue-500/10 blur-3xl" />
 
       <div className="container relative mx-auto px-4">
         <Link
           href="/projects"
-          className="inline-flex rounded-xl border border-[var(--border)] px-4 py-2 text-sm font-medium text-[var(--muted)] transition hover:border-cyan-500 hover:text-cyan-400"
+          className="inline-flex rounded-xl border border-[var(--border)] px-4 py-2 text-sm font-medium text-[var(--muted)] transition hover:border-[var(--primary)] hover:text-[var(--primary)]"
         >
           ← Back to Projects
         </Link>
 
         <div className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--surface)]/60 p-8 shadow-xl shadow-black/5 md:p-10">
-          <span className="inline-flex rounded-full border border-cyan-500/20 bg-cyan-500/10 px-4 py-2 text-sm font-semibold text-cyan-400">
+          <span className="inline-flex rounded-full border border-[var(--primary)]/20 bg-[var(--primary)]/10 px-4 py-2 text-sm font-semibold text-[var(--primary)]">
             {project.category}
           </span>
 
@@ -41,7 +41,7 @@ const ProjectDetailsPage = async ({ params }) => {
             <Link
               href={project.liveLink}
               target="_blank"
-              className="rounded-xl bg-cyan-500 px-6 py-3 font-semibold text-white shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-600"
+              className="rounded-xl bg-[var(--primary)] px-6 py-3 font-semibold text-white shadow-lg shadow-pink-500/20 transition hover:bg-[var(--primary-dark)]"
             >
               Live Preview
             </Link>
@@ -49,7 +49,7 @@ const ProjectDetailsPage = async ({ params }) => {
             <Link
               href={project.githubLink}
               target="_blank"
-              className="rounded-xl border border-[var(--border)] px-6 py-3 font-semibold transition hover:border-cyan-500 hover:text-cyan-400"
+              className="rounded-xl border border-[var(--border)] px-6 py-3 font-semibold transition hover:border-[var(--primary)] hover:text-[var(--primary)]"
             >
               GitHub Repository
             </Link>
@@ -113,7 +113,7 @@ const ProjectDetailsPage = async ({ params }) => {
             <ul className="mt-6 space-y-4">
               {project.features.map((feature) => (
                 <li key={feature} className="flex gap-3 text-[var(--muted)]">
-                  <span className="text-cyan-400">✓</span>
+                  <span className="text-[var(--primary)]">✓</span>
                   <span>{feature}</span>
                 </li>
               ))}

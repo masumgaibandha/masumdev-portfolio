@@ -53,13 +53,13 @@ const AboutPage = () => {
 
   return (
     <section className="relative min-h-screen overflow-hidden py-24">
-      <div className="pointer-events-none absolute left-0 top-20 h-96 w-96 rounded-full bg-cyan-500/10 blur-3xl" />
+      <div className="pointer-events-none absolute left-0 top-20 h-96 w-96 rounded-full bg-[var(--primary)]/10 blur-3xl" />
       <div className="pointer-events-none absolute bottom-20 right-0 h-96 w-96 rounded-full bg-blue-500/10 blur-3xl" />
 
       <div className="container relative mx-auto px-4">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <div>
-            <p className="font-medium text-cyan-400">About Me</p>
+            <p className="font-medium text-[var(--primary)]">About Me</p>
 
             <h1 className="mt-4 text-4xl font-bold leading-tight md:text-6xl">
               Full Stack Developer With Real Client Experience
@@ -81,14 +81,14 @@ const AboutPage = () => {
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 href="/projects"
-                className="rounded-xl bg-cyan-500 px-6 py-3 font-semibold text-white shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-600"
+                className="rounded-xl bg-[var(--primary)] px-6 py-3 font-semibold text-white shadow-lg shadow-pink-500/20 transition hover:bg-[var(--primary-dark)]"
               >
                 View Projects
               </Link>
 
               <Link
                 href="/contact"
-                className="rounded-xl border border-[var(--border)] px-6 py-3 font-semibold transition hover:border-cyan-500 hover:text-cyan-400"
+                className="rounded-xl border border-[var(--border)] px-6 py-3 font-semibold transition hover:border-[var(--primary)] hover:text-[var(--primary)]"
               >
                 Contact Me
               </Link>
@@ -114,9 +114,9 @@ const AboutPage = () => {
           {highlights.map((item) => (
             <div
               key={item.label}
-              className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/50 p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/10"
+              className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/50 p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[var(--primary)]/50 hover:shadow-lg hover:shadow-cyan-500/10"
             >
-              <h2 className="text-3xl font-bold text-cyan-400">{item.value}</h2>
+              <h2 className="text-3xl font-bold text-[var(--primary)]">{item.value}</h2>
               <p className="mt-3 text-sm text-[var(--muted)]">{item.label}</p>
             </div>
           ))}
@@ -124,7 +124,7 @@ const AboutPage = () => {
 
         <div className="mt-20 grid gap-8 lg:grid-cols-2">
           <div className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/50 p-8">
-            <p className="font-medium text-cyan-400">My Story</p>
+            <p className="font-medium text-[var(--primary)]">My Story</p>
 
             <h2 className="mt-4 text-3xl font-bold">
               From Client Work to Product Development
@@ -147,7 +147,7 @@ const AboutPage = () => {
           </div>
 
           <div className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/50 p-8">
-            <p className="font-medium text-cyan-400">Technical Skills</p>
+            <p className="font-medium text-[var(--primary)]">Technical Skills</p>
 
             <h2 className="mt-4 text-3xl font-bold">What I Work With</h2>
 
@@ -166,7 +166,7 @@ const AboutPage = () => {
 
         <div className="mt-20">
           <div className="mb-10 text-center">
-            <p className="font-medium text-cyan-400">Journey</p>
+            <p className="font-medium text-[var(--primary)]">Journey</p>
             <h2 className="mt-4 text-4xl font-bold">Professional Timeline</h2>
           </div>
 
@@ -174,9 +174,9 @@ const AboutPage = () => {
             {timeline.map((item) => (
               <div
                 key={item.title}
-                className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/50 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/10"
+                className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/50 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--primary)]/50 hover:shadow-lg hover:shadow-cyan-500/10"
               >
-                <p className="text-sm font-medium text-cyan-400">
+                <p className="text-sm font-medium text-[var(--primary)]">
                   {item.period}
                 </p>
 
@@ -190,7 +190,7 @@ const AboutPage = () => {
           </div>
         </div>
 
-        <div className="mt-20 rounded-[2rem] border border-cyan-500/20 bg-cyan-500/5 p-10 text-center md:p-14">
+        <div className="mt-20 rounded-[2rem] border border-[var(--primary)]/20 bg-[var(--primary)]/5 p-10 text-center md:p-14">
           <h2 className="text-4xl font-bold">Let&apos;s Work Together</h2>
 
           <p className="mx-auto mt-5 max-w-2xl leading-8 text-[var(--muted)]">
@@ -201,7 +201,7 @@ const AboutPage = () => {
 
           <Link
             href="/contact"
-            className="mt-8 inline-flex rounded-xl bg-cyan-500 px-8 py-4 font-semibold text-white shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-600"
+            className="mt-8 inline-flex rounded-xl bg-[var(--primary)] px-8 py-4 font-semibold text-white shadow-lg shadow-pink-500/20 transition hover:bg-[var(--primary-dark)]"
           >
             Contact Me
           </Link>
