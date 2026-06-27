@@ -93,6 +93,17 @@ const ProjectsPage = () => {
           ))}
         </div>
       </div>
+      <div className="mt-14 text-center">
+        <Link
+          href="https://github.com/masumgaibandha?tab=repositories"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-xl bg-[var(--primary)] px-6 py-3 font-semibold text-white shadow-lg shadow-cyan-500/20 transition hover:bg-[var(--primary-dark)]"
+        >
+          View GitHub Repositories
+          <span>→</span>
+        </Link>
+      </div>
     </section>
   );
 };
