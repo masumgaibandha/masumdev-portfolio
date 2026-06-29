@@ -33,7 +33,7 @@ const Hero = () => {
             </Link>
 
             <Link
-              href="/Abdullah-Masum-Resume.pdf"
+              href="/Abdullah-Al-Masum-Resume.pdf"
               target="_blank"
               className="rounded-xl border border-[var(--border)] px-8 py-4 font-semibold transition hover:border-[var(--primary)] hover:text-[var(--primary)]"
             >
