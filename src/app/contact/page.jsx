@@ -44,7 +44,8 @@ const ContactPage = () => {
               <h2 className="text-3xl font-bold">Project Inquiry</h2>
 
               <p className="mt-4 leading-7 text-[var(--muted)]">
-                Tell me about your project, goals, and requirements. I'll review
+                Tell me about your project, goals, and requirements. I&apos;ll
+                review
                 the details and get back to you as soon as possible.
               </p>
             </div>
@@ -73,6 +74,7 @@ const ContactPage = () => {
                 <Link
                   href="https://github.com/masumgaibandha"
                   target="_blank"
+                  rel="noopener"
                   className="flex items-center gap-3 text-[var(--muted)] transition hover:text-[var(--primary)]"
                 >
                   <FaGithub className="size-5 text-[var(--primary)]" />
@@ -82,6 +84,7 @@ const ContactPage = () => {
                 <Link
                   href="https://www.linkedin.com/in/masumgaibandha"
                   target="_blank"
+                  rel="noopener"
                   className="flex items-center gap-3 text-[var(--muted)] transition hover:text-[var(--primary)]"
                 >
                   <FaLinkedinIn className="size-5 text-[var(--primary)]" />
@@ -91,6 +94,7 @@ const ContactPage = () => {
                 <Link
                   href="https://www.upwork.com/freelancers/~01a5eccfaf40a8a065?viewMode=1"
                   target="_blank"
+                  rel="noopener"
                   className="flex items-center gap-3 text-[var(--muted)] transition hover:text-[var(--primary)]"
                 >
                   <FaUpwork className="size-5 text-[var(--primary)]" />
@@ -100,6 +104,7 @@ const ContactPage = () => {
                 <Link
                   href="https://www.fiverr.com/expertlead"
                   target="_blank"
+                  rel="noopener"
                   className="flex items-center gap-3 text-[var(--muted)] transition hover:text-[var(--primary)]"
                 >
                   <SiFiverr className="size-5 text-[var(--primary)]" />

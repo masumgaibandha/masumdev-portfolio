@@ -49,36 +49,63 @@ const ContactForm = () => {
   };
   return (
     <form onSubmit={onSubmit} className="grid gap-5">
-      <input
-        type="text"
-        name="name"
-        placeholder="Your Name"
-        required
-        className="rounded-xl border border-[var(--border)] bg-[var(--background)] px-4 py-3"
-      />
+      <div className="grid gap-2">
+        <label htmlFor="contact-name" className="text-sm font-medium">
+          Your Name
+        </label>
+        <input
+          id="contact-name"
+          type="text"
+          name="name"
+          autoComplete="name"
+          placeholder="Your Name"
+          required
+          className="rounded-xl border border-[var(--border)] bg-[var(--background)] px-4 py-3"
+        />
+      </div>
 
-      <input
-        type="email"
-        name="email"
-        placeholder="Email Address"
-        required
-        className="rounded-xl border border-[var(--border)] bg-[var(--background)] px-4 py-3"
-      />
+      <div className="grid gap-2">
+        <label htmlFor="contact-email" className="text-sm font-medium">
+          Email Address
+        </label>
+        <input
+          id="contact-email"
+          type="email"
+          name="email"
+          autoComplete="email"
+          placeholder="Email Address"
+          required
+          className="rounded-xl border border-[var(--border)] bg-[var(--background)] px-4 py-3"
+        />
+      </div>
 
-      <input
-        type="text"
-        name="projectType"
-        placeholder="Project Type"
-        className="rounded-xl border border-[var(--border)] bg-[var(--background)] px-4 py-3"
-      />
+      <div className="grid gap-2">
+        <label htmlFor="contact-project-type" className="text-sm font-medium">
+          Project Type <span className="text-[var(--muted)]">(optional)</span>
+        </label>
+        <input
+          id="contact-project-type"
+          type="text"
+          name="projectType"
+          autoComplete="off"
+          placeholder="SaaS platform, dashboard, marketplace..."
+          className="rounded-xl border border-[var(--border)] bg-[var(--background)] px-4 py-3"
+        />
+      </div>
 
-      <textarea
-        rows={6}
-        name="message"
-        placeholder="Tell me about your project..."
-        required
-        className="resize-none rounded-xl border border-[var(--border)] bg-[var(--background)] px-4 py-3"
-      />
+      <div className="grid gap-2">
+        <label htmlFor="contact-message" className="text-sm font-medium">
+          Message
+        </label>
+        <textarea
+          id="contact-message"
+          rows={6}
+          name="message"
+          placeholder="Tell me about your project..."
+          required
+          className="resize-none rounded-xl border border-[var(--border)] bg-[var(--background)] px-4 py-3"
+        />
+      </div>
 
       <button
         type="submit"

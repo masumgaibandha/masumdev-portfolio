@@ -1,7 +1,39 @@
-import { getProjectBySlug } from "@/data/projects";
+import { featuredProjects, getProjectBySlug } from "@/data/projects";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+
+export function generateStaticParams() {
+  return featuredProjects.map((project) => ({ slug: project.slug }));
+}
+
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const project = getProjectBySlug(slug);
+
+  if (!project) {
+    return { title: "Project Not Found" };
+  }
+
+  const canonical = `/projects/${project.slug}`;
+
+  return {
+    title: `${project.title} — ${project.category}`,
+    description: project.description,
+    alternates: { canonical },
+    openGraph: {
+      title: `${project.title} — ${project.category}`,
+      description: project.description,
+      url: canonical,
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.title} — ${project.category}`,
+      description: project.description,
+    },
+  };
+}
 
 const ProjectDetailsPage = async ({ params }) => {
   const { slug } = await params;
@@ -41,6 +73,7 @@ const ProjectDetailsPage = async ({ params }) => {
             <Link
               href={project.liveLink}
               target="_blank"
+              rel="noopener"
               className="rounded-xl bg-[var(--primary)] px-6 py-3 font-semibold text-white shadow-lg shadow-pink-500/20 transition hover:bg-[var(--primary-dark)]"
             >
               Live Preview
@@ -49,6 +82,7 @@ const ProjectDetailsPage = async ({ params }) => {
             <Link
               href={project.githubLink}
               target="_blank"
+              rel="noopener"
               className="rounded-xl border border-[var(--border)] px-6 py-3 font-semibold transition hover:border-[var(--primary)] hover:text-[var(--primary)]"
             >
               GitHub Repository

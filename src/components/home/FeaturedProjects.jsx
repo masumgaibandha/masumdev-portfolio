@@ -72,6 +72,7 @@ const FeaturedProjects = ({ projects }) => {
                 <Link
                   href={mainProject.liveLink}
                   target="_blank"
+                  rel="noopener"
                   className="rounded-xl border border-[var(--border)] px-6 py-3 font-semibold transition hover:border-[var(--primary)] hover:text-[var(--primary)]"
                 >
                   Live Preview

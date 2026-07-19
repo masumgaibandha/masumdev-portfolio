@@ -66,6 +66,7 @@ const Footer = () => {
               <Link
                 href="https://github.com/masumgaibandha"
                 target="_blank"
+                rel="noopener"
                 aria-label="GitHub"
                 className="flex size-10 items-center justify-center rounded-xl border border-[var(--border)] text-[var(--muted)] transition hover:-translate-y-0.5 hover:border-[var(--primary)] hover:text-[var(--primary)]"
               >
@@ -75,6 +76,7 @@ const Footer = () => {
               <Link
                 href="https://www.linkedin.com/in/masumgaibandha"
                 target="_blank"
+                rel="noopener"
                 aria-label="LinkedIn"
                 className="flex size-10 items-center justify-center rounded-xl border border-[var(--border)] text-[var(--muted)] transition hover:-translate-y-0.5 hover:border-[var(--primary)] hover:text-[var(--primary)]"
               >
@@ -84,6 +86,7 @@ const Footer = () => {
               <Link
                 href="https://www.upwork.com/freelancers/~01a5eccfaf40a8a065?viewMode=1"
                 target="_blank"
+                rel="noopener"
                 aria-label="Upwork"
                 className="flex size-10 items-center justify-center rounded-xl border border-[var(--border)] text-[var(--muted)] transition hover:-translate-y-0.5 hover:border-[var(--primary)] hover:text-[var(--primary)]"
               >
@@ -93,6 +96,7 @@ const Footer = () => {
               <Link
                 href="https://www.fiverr.com/expertlead"
                 target="_blank"
+                rel="noopener"
                 aria-label="Fiverr"
                 className="flex size-10 items-center justify-center rounded-xl border border-[var(--border)] text-[var(--muted)] transition hover:-translate-y-0.5 hover:border-[var(--primary)] hover:text-[var(--primary)]"
               >

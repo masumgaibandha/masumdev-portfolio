@@ -55,7 +55,8 @@ const AboutPreview = () => {
             </h2>
 
             <p className="mt-6 leading-8 text-[var(--muted)]">
-              I'm Abdullah Masum, a Full Stack Developer focused on building
+              I&apos;m Abdullah Masum, a Full Stack Developer focused on
+              building
               modern web applications using Next.js, React, MongoDB, Express.js,
               Tailwind CSS, and scalable SaaS architecture.
             </p>

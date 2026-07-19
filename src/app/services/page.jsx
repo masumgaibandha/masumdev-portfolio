@@ -99,7 +99,8 @@ const ServicesPage = () => {
           <h2 className="text-3xl font-bold">Need a Custom Solution?</h2>
 
           <p className="mx-auto mt-4 max-w-2xl leading-8 text-[var(--muted)]">
-            Every business is different. Let's discuss your requirements and
+            Every business is different. Let&apos;s discuss your requirements
+            and
             build something that fits your workflow and goals.
           </p>
 

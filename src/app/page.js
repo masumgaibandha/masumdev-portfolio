@@ -1,4 +1,3 @@
-import ThemeToggle from "@/components/common/ThemeToggle";
 import AboutPreview from "@/components/home/AboutPreview";
 import CTA from "@/components/home/CTA";
 import FeaturedProjects from "@/components/home/FeaturedProjects";

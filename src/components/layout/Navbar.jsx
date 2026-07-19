@@ -23,9 +23,9 @@ const Navbar = () => {
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
         <Link href="/" className="group flex items-center gap-3">
           <div className="leading-none">
-            <h1 className="text-2xl font-black tracking-tight text-[var(--foreground)]">
+            <span className="block text-2xl font-black tracking-tight text-[var(--foreground)]">
               Masum<span className="text-[var(--primary)]">Dev</span>
-            </h1>
+            </span>
             <p className="mt-1 text-[11px] font-medium uppercase tracking-[0.28em] text-[var(--muted)]">
               Full Stack Developer
             </p>
@@ -66,18 +66,24 @@ const Navbar = () => {
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label={isOpen ? "Close main menu" : "Open main menu"}
+          aria-expanded={isOpen}
+          aria-controls="mobile-navigation"
           className="rounded-2xl border border-white/10 bg-white/[0.03] p-2 text-[var(--foreground)] md:hidden"
         >
           {isOpen ? (
-            <HiX className="size-6" />
+            <HiX className="size-6" aria-hidden="true" />
           ) : (
-            <HiMenuAlt3 className="size-6" />
+            <HiMenuAlt3 className="size-6" aria-hidden="true" />
           )}
         </button>
       </div>
 
       {isOpen && (
-        <div className="border-t border-white/10 bg-[var(--background)]/95 backdrop-blur-xl md:hidden">
+        <div
+          id="mobile-navigation"
+          className="border-t border-white/10 bg-[var(--background)]/95 backdrop-blur-xl md:hidden"
+        >
           <div className="space-y-2 px-4 py-5">
             {navLinks.map((link) => {
               const active = pathname === link.href;
