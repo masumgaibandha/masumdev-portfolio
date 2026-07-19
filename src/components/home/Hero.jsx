@@ -32,13 +32,13 @@ const Hero = () => {
               View Projects
             </Link>
 
-            <Link
+            <a
               href="/Abdullah-Al-Masum-Resume.pdf"
-              target="_blank"
+              download="Abdullah-Al-Masum-Resume.pdf"
               className="rounded-xl border border-[var(--border)] px-8 py-4 font-semibold transition hover:border-[var(--primary)] hover:text-[var(--primary)]"
             >
               Download Resume
-            </Link>
+            </a>
           </div>
         </div>
       </div>
