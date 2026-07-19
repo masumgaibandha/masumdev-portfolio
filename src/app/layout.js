@@ -1,8 +1,21 @@
 import "./globals.css";
+import { Geist, Geist_Mono } from "next/font/google";
 import ThemeProvider from "@/providers/ThemeProvider";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Toaster } from "react-hot-toast";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata = {
   title: {
@@ -33,15 +46,6 @@ export const metadata = {
     url: "https://masumdev.com",
     siteName: "MasumDev",
     type: "website",
-
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Abdullah Masum Portfolio",
-      },
-    ],
   },
 
   twitter: {
@@ -49,15 +53,17 @@ export const metadata = {
     title: "Abdullah Al Masum | Full Stack Developer",
     description:
       "Full Stack Developer building modern web applications with Next.js, React, MongoDB, and JavaScript.",
-
-    images: ["/og-image.png"],
   },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body>
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable}`}
+      suppressHydrationWarning
+    >
+      <body className="font-sans">
         <ThemeProvider>
           <Navbar />
           <main>{children}</main>

@@ -6,7 +6,7 @@ const CTA = () => {
       <div className="container mx-auto px-4">
         <div className="rounded-4xl border border-[var(--primary)]/20 bg-[var(--primary)]/5 p-10 text-center md:p-16">
           <p className="font-medium text-[var(--primary)]">
-            Let's Build Something Great
+            Let&apos;s Build Something Great
           </p>
 
           <h2 className="mt-4 text-4xl font-bold md:text-5xl">
@@ -15,7 +15,8 @@ const CTA = () => {
 
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[var(--muted)]">
             Whether you need a SaaS platform, business application, hiring
-            system, dashboard, or custom web solution, I'd love to discuss your
+            system, dashboard, or custom web solution, I&apos;d love to discuss
+            your
             project.
           </p>
 

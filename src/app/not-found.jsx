@@ -14,7 +14,8 @@ const NotFound = () => {
           <h2 className="mt-6 text-4xl font-bold">Page Not Found</h2>
 
           <p className="mx-auto mt-6 max-w-xl leading-8 text-[var(--muted)]">
-            The page you are looking for doesn't exist, may have been moved, or
+            The page you are looking for doesn&apos;t exist, may have been
+            moved, or
             the URL might be incorrect.
           </p>
 
