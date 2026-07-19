@@ -37,13 +37,13 @@ export const metadata = {
   ],
   authors: [{ name: "Abdullah Al Masum" }],
   creator: "Abdullah Al Masum",
-  metadataBase: new URL("https://masumdev.com"),
+  metadataBase: new URL("https://www.masumdev.com"),
 
   openGraph: {
     title: "Abdullah Al Masum | Full Stack Developer",
     description:
       "Full Stack Developer building modern web applications, SaaS platforms, dashboards, and business tools.",
-    url: "https://masumdev.com",
+    url: "https://www.masumdev.com",
     siteName: "MasumDev",
     type: "website",
   },

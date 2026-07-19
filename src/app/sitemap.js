@@ -1,7 +1,7 @@
 import { featuredProjects } from "@/data/projects";
 
 export default function sitemap() {
-  const baseUrl = "https://masumdev.com";
+  const baseUrl = "https://www.masumdev.com";
   const lastModified = new Date();
 
   const staticRoutes = [

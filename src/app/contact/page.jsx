@@ -2,6 +2,7 @@ export const metadata = {
   title: "Contact",
   description:
     "Contact Abdullah Masum for full-stack web development, SaaS application development, dashboard development, and modern business web applications.",
+  alternates: { canonical: "/contact" },
 };
 
 import ContactForm from "@/components/contact/ContactForm";

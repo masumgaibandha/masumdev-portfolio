@@ -8,6 +8,10 @@ import TechStack from "@/components/home/TechStack";
 import WhyMe from "@/components/home/WhyMe";
 import { featuredProjects } from "@/data/projects";
 
+export const metadata = {
+  alternates: { canonical: "/" },
+};
+
 export default function HomePage() {
   return (
     <>
