@@ -13,7 +13,7 @@ const NotFound = () => {
 
           <h2 className="mt-6 text-4xl font-bold">Page Not Found</h2>
 
-          <p className="mx-auto mt-6 max-w-xl leading-8 text-[var(--muted)]">
+          <p className="mx-auto mt-6 max-w-xl leading-8 text-[var(--muted-foreground)]">
             The page you are looking for doesn&apos;t exist, may have been
             moved, or
             the URL might be incorrect.
@@ -22,7 +22,7 @@ const NotFound = () => {
           <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
             <Link
               href="/"
-              className="rounded-xl bg-[var(--primary)] px-8 py-4 font-semibold text-white shadow-lg shadow-pink-500/20 transition hover:bg-[var(--primary-dark)]"
+              className="rounded-xl bg-[var(--primary)] px-8 py-4 font-semibold text-[var(--primary-foreground)] shadow-lg shadow-pink-500/20 transition hover:bg-[var(--primary-hover)]"
             >
               Back to Home
             </Link>

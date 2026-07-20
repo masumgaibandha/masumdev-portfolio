@@ -66,7 +66,7 @@ const ServicesPage = () => {
 
           <h1 className="mt-4 text-5xl font-bold">Development Services</h1>
 
-          <p className="mt-6 text-lg leading-8 text-[var(--muted)]">
+          <p className="mt-6 text-lg leading-8 text-[var(--muted-foreground)]">
             I help businesses build modern web applications that are scalable,
             maintainable, and focused on real business outcomes.
           </p>
@@ -80,13 +80,13 @@ const ServicesPage = () => {
             >
               <h2 className="text-2xl font-bold">{service.title}</h2>
 
-              <p className="mt-4 leading-7 text-[var(--muted)]">
+              <p className="mt-4 leading-7 text-[var(--muted-foreground)]">
                 {service.description}
               </p>
 
               <ul className="mt-6 space-y-3">
                 {service.features.map((feature) => (
-                  <li key={feature} className="flex gap-3 text-[var(--muted)]">
+                  <li key={feature} className="flex gap-3 text-[var(--muted-foreground)]">
                     <span className="text-[var(--primary)]">✓</span>
                     <span>{feature}</span>
                   </li>
@@ -99,7 +99,7 @@ const ServicesPage = () => {
         <div className="mt-16 rounded-4xl border border-[var(--primary)]/20 bg-[var(--primary)]/5 p-10 text-center">
           <h2 className="text-3xl font-bold">Need a Custom Solution?</h2>
 
-          <p className="mx-auto mt-4 max-w-2xl leading-8 text-[var(--muted)]">
+          <p className="mx-auto mt-4 max-w-2xl leading-8 text-[var(--muted-foreground)]">
             Every business is different. Let&apos;s discuss your requirements
             and
             build something that fits your workflow and goals.
@@ -107,7 +107,7 @@ const ServicesPage = () => {
 
           <Link
             href="/contact"
-            className="mt-8 inline-flex rounded-xl bg-[var(--primary)] px-8 py-4 font-semibold text-white shadow-lg shadow-pink-500/20 transition hover:bg-[var(--primary-dark)]"
+            className="mt-8 inline-flex rounded-xl bg-[var(--primary)] px-8 py-4 font-semibold text-[var(--primary-foreground)] shadow-lg shadow-pink-500/20 transition hover:bg-[var(--primary-hover)]"
           >
             Contact Me
           </Link>

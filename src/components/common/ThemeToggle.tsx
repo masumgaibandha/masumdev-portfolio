@@ -5,12 +5,14 @@ import { useTheme } from "next-themes";
 import { useSyncExternalStore } from "react";
 
 const TOGGLE_CLASSES =
-  "flex h-10 w-10 items-center justify-center rounded-xl border border-slate-700 bg-slate-900 text-slate-300 transition hover:border-[var(--primary)] hover:text-[var(--primary)]";
+  "flex h-10 w-10 items-center justify-center rounded-md border border-border " +
+  "bg-card text-muted-foreground transition-colors hover:border-border-strong " +
+  "hover:text-foreground";
 
 const subscribe = () => () => {};
 
-const ThemeToggle = () => {
-  const { theme, setTheme } = useTheme();
+export default function ThemeToggle() {
+  const { resolvedTheme, setTheme } = useTheme();
 
   /*
    * false during SSR and the first client render, true afterwards.
@@ -26,13 +28,17 @@ const ThemeToggle = () => {
 
   /*
    * Render a same-size, non-interactive placeholder until mounted so the
-   * navbar does not reflow on hydration. Theme is unknown on the server.
+   * header does not reflow on hydration. Theme is unknown on the server.
    */
   if (!mounted) {
     return <div className={TOGGLE_CLASSES} aria-hidden="true" />;
   }
 
-  const isDark = theme === "dark";
+  /*
+   * resolvedTheme, not theme: with defaultTheme="system" the raw `theme`
+   * value is "system", which would report light while rendering dark.
+   */
+  const isDark = resolvedTheme === "dark";
 
   return (
     <button
@@ -48,6 +54,4 @@ const ThemeToggle = () => {
       )}
     </button>
   );
-};
-
-export default ThemeToggle;
+}

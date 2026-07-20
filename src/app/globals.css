@@ -6,52 +6,103 @@
  */
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* ==========================================================================
+   Technical Graphite — approved design tokens
+   --------------------------------------------------------------------------
+   SEMANTIC USAGE RULES. Components consume Tailwind utilities generated from
+   these tokens (bg-surface, text-muted-foreground, border-border). Raw hex
+   values must never appear in component files.
+
+   1.  Neutrals carry 90-95% of the interface. Saturated colour should stay
+       under ~5% of painted pixels per viewport — if a greyscale screenshot
+       of the page still reads correctly, the hierarchy is right.
+   2.  `primary` is reserved for interaction: primary buttons, links, focus
+       rings, selected states, and small technical highlights. It passes AA
+       both as text on white and as a fill under white text.
+   3.  `accent` (amber) is for selected badges, statistics, and small accents
+       only. FORBIDDEN: amber buttons, amber backgrounds larger than a badge,
+       amber body text, amber gradients, amber icons in bulk.
+   4.  `accent-subtle` is a badge background only, never a section background.
+   5.  `surface` and `card` separate elevation. Section backgrounds stay
+       neutral — no blue-tinted or gradient section fills.
+   6.  `border` for ordinary separation; `border-strong` for emphasis such as
+       screenshot frames and active states.
+   7.  No gradient text, no large colour glow blobs, no coloured shadows.
+   8.  Screenshots sit in neutral frames: 1px border, subtle surface
+       background, restrained radius, no glow.
+   9.  `success` / `warning` / `destructive` are status only, never decoration.
+   10. Geist Sans for all headings, body, navigation and UI. Geist Mono is
+       restricted to technical labels and code-related details.
+   ========================================================================== */
+
 :root {
   --background: #ffffff;
-  --surface: #f8fafc;
+  --foreground: #18181b; /* 17.7:1 */
+  --muted: #f4f4f5;
+  --muted-foreground: #52525b; /*  7.7:1 */
+  --surface: #fafafa;
   --card: #ffffff;
+  --border: #e4e4e7;
+  --border-strong: #d4d4d8;
+  --primary: #1d4ed8; /*  6.7:1 as text AND as fill */
+  --primary-hover: #1e40af;
+  --primary-foreground: #ffffff;
+  --accent: #b45309; /*  5.0:1 */
+  --accent-foreground: #ffffff;
+  --accent-subtle: #fffbeb;
+  --success: #15803d; /*  5.0:1 */
+  --warning: #a16207;
+  --destructive: #b91c1c; /*  6.5:1 */
+  --destructive-foreground: #ffffff;
+  --ring: #1d4ed8;
 
-  --foreground: #0f172a;
-  --muted: #64748b;
-  --border: #e2e8f0;
-
-  --primary: #06b6d4;
-  --primary-dark: #0891b2;
+  color-scheme: light;
 }
 
 .dark {
-  --background: #0f172a;
-  --surface: #1e293b;
-  --card: #111827;
-
-  --foreground: #f8fafc;
-  --muted: #94a3b8;
-  --border: #1e293b;
-
-  --primary: #06b6d4;
-  --primary-dark: #0891b2;
+  --background: #09090b;
+  --foreground: #fafafa; /* 19.1:1 */
+  --muted: #18181b;
+  --muted-foreground: #a1a1aa; /*  7.8:1 */
+  --surface: #18181b;
+  --card: #131316;
+  --border: #27272a;
+  --border-strong: #3f3f46;
+  --primary: #60a5fa; /*  7.8:1 */
+  --primary-hover: #93c5fd;
+  --primary-foreground: #09090b;
+  --accent: #fbbf24; /* 11.9:1 */
+  --accent-foreground: #09090b;
+  --accent-subtle: #1c1508;
+  --success: #4ade80;
+  --warning: #facc15;
+  --destructive: #f87171;
+  --destructive-foreground: #09090b;
+  --ring: #60a5fa;
 
   color-scheme: dark;
-}
-
-.light {
-  --background: #ffffff;
-  --surface: #f8fafc;
-  --card: #ffffff;
-
-  --foreground: #0f172a;
-  --muted: #64748b;
-  --border: #e2e8f0;
-
-  --primary: #06b6d4;
-  --primary-dark: #0891b2;
-
-  color-scheme: light;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-surface: var(--surface);
+  --color-card: var(--card);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-subtle: var(--accent-subtle);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-ring: var(--ring);
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -64,14 +115,11 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
 }
 
 /* Visible keyboard focus for every interactive element. */
 :focus-visible {
-  outline: 2px solid var(--primary);
+  outline: 2px solid var(--ring);
   outline-offset: 2px;
   border-radius: 4px;
 }

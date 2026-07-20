@@ -81,7 +81,7 @@ const ContactForm = () => {
 
       <div className="grid gap-2">
         <label htmlFor="contact-project-type" className="text-sm font-medium">
-          Project Type <span className="text-[var(--muted)]">(optional)</span>
+          Project Type <span className="text-[var(--muted-foreground)]">(optional)</span>
         </label>
         <input
           id="contact-project-type"
@@ -110,7 +110,7 @@ const ContactForm = () => {
       <button
         type="submit"
         disabled={loading}
-        className="rounded-xl bg-[var(--primary)] px-6 py-4 font-semibold text-white cursor-pointer"
+        className="rounded-xl bg-[var(--primary)] px-6 py-4 font-semibold text-[var(--primary-foreground)] cursor-pointer"
       >
         {loading ? "Sending..." : "Send Message"}
       </button>

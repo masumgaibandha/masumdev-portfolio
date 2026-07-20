@@ -25,7 +25,7 @@ const ProjectsPage = () => {
             Web Applications I&apos;ve Built
           </h1>
 
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-[var(--muted)] md:text-lg">
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-[var(--muted-foreground)] md:text-lg">
             A collection of full-stack applications, SaaS-style platforms, and
             business-focused web products built with modern JavaScript
             technologies.
@@ -63,7 +63,7 @@ const ProjectsPage = () => {
                   {project.title}
                 </h2>
 
-                <p className="mt-4 line-clamp-3 text-sm leading-7 text-[var(--muted)] md:text-base">
+                <p className="mt-4 line-clamp-3 text-sm leading-7 text-[var(--muted-foreground)] md:text-base">
                   {project.description}
                 </p>
 
@@ -71,7 +71,7 @@ const ProjectsPage = () => {
                   {project.stack.slice(0, 5).map((item) => (
                     <span
                       key={item}
-                      className="rounded-full border border-[var(--border)] bg-[var(--background)]/40 px-3 py-1 text-xs font-medium text-[var(--muted)]"
+                      className="rounded-full border border-[var(--border)] bg-[var(--background)]/40 px-3 py-1 text-xs font-medium text-[var(--muted-foreground)]"
                     >
                       {item}
                     </span>
@@ -81,7 +81,7 @@ const ProjectsPage = () => {
                 <div className="mt-auto pt-8">
                   <Link
                     href={`/projects/${project.slug}`}
-                    className="inline-flex items-center gap-2 rounded-full border border-[var(--primary)]/30 bg-[var(--primary)]/10 px-5 py-3 text-sm font-semibold text-[var(--primary)] transition duration-300 hover:border-[var(--primary)] hover:bg-[var(--primary)] hover:text-white"
+                    className="inline-flex items-center gap-2 rounded-full border border-[var(--primary)]/30 bg-[var(--primary)]/10 px-5 py-3 text-sm font-semibold text-[var(--primary)] transition duration-300 hover:border-[var(--primary)] hover:bg-[var(--primary)] hover:text-[var(--primary-foreground)]"
                   >
                     View Case Study
                     <span className="transition duration-300 group-hover:translate-x-1">
@@ -95,15 +95,15 @@ const ProjectsPage = () => {
         </div>
       </div>
       <div className="mt-14 text-center">
-        <Link
+        <a
           href="https://github.com/masumgaibandha?tab=repositories"
           target="_blank"
           rel="noopener"
-          className="inline-flex items-center gap-2 rounded-xl bg-[var(--primary)] px-6 py-3 font-semibold text-white shadow-lg shadow-cyan-500/20 transition hover:bg-[var(--primary-dark)]"
+          className="inline-flex items-center gap-2 rounded-xl bg-[var(--primary)] px-6 py-3 font-semibold text-[var(--primary-foreground)] shadow-lg shadow-cyan-500/20 transition hover:bg-[var(--primary-hover)]"
         >
           View GitHub Repositories
           <span>→</span>
-        </Link>
+        </a>
       </div>
     </section>
   );

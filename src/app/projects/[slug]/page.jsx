@@ -51,7 +51,7 @@ const ProjectDetailsPage = async ({ params }) => {
       <div className="container relative mx-auto px-4">
         <Link
           href="/projects"
-          className="inline-flex rounded-xl border border-[var(--border)] px-4 py-2 text-sm font-medium text-[var(--muted)] transition hover:border-[var(--primary)] hover:text-[var(--primary)]"
+          className="inline-flex rounded-xl border border-[var(--border)] px-4 py-2 text-sm font-medium text-[var(--muted-foreground)] transition hover:border-[var(--primary)] hover:text-[var(--primary)]"
         >
           ← Back to Projects
         </Link>
@@ -65,7 +65,7 @@ const ProjectDetailsPage = async ({ params }) => {
             {project.title}
           </h1>
 
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-[var(--muted)]">
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-[var(--muted-foreground)]">
             {project.overview}
           </p>
 
@@ -74,7 +74,7 @@ const ProjectDetailsPage = async ({ params }) => {
               href={project.liveLink}
               target="_blank"
               rel="noopener"
-              className="rounded-xl bg-[var(--primary)] px-6 py-3 font-semibold text-white shadow-lg shadow-pink-500/20 transition hover:bg-[var(--primary-dark)]"
+              className="rounded-xl bg-[var(--primary)] px-6 py-3 font-semibold text-[var(--primary-foreground)] shadow-lg shadow-pink-500/20 transition hover:bg-[var(--primary-hover)]"
             >
               Live Preview
             </Link>
@@ -105,19 +105,19 @@ const ProjectDetailsPage = async ({ params }) => {
 
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           <div className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/50 p-6">
-            <p className="text-sm text-[var(--muted)]">Project Type</p>
+            <p className="text-sm text-[var(--muted-foreground)]">Project Type</p>
             <h3 className="mt-2 text-xl font-semibold">{project.category}</h3>
           </div>
 
           <div className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/50 p-6">
-            <p className="text-sm text-[var(--muted)]">Technologies</p>
+            <p className="text-sm text-[var(--muted-foreground)]">Technologies</p>
             <h3 className="mt-2 text-xl font-semibold">
               {project.stack.length} Tools
             </h3>
           </div>
 
           <div className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/50 p-6">
-            <p className="text-sm text-[var(--muted)]">Features</p>
+            <p className="text-sm text-[var(--muted-foreground)]">Features</p>
             <h3 className="mt-2 text-xl font-semibold">
               {project.features.length}+ Features
             </h3>
@@ -127,14 +127,14 @@ const ProjectDetailsPage = async ({ params }) => {
         <div className="mt-8 grid gap-6 lg:grid-cols-2">
           <div className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/50 p-8">
             <h2 className="text-2xl font-bold">Problem</h2>
-            <p className="mt-5 leading-8 text-[var(--muted)]">
+            <p className="mt-5 leading-8 text-[var(--muted-foreground)]">
               {project.problem}
             </p>
           </div>
 
           <div className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/50 p-8">
             <h2 className="text-2xl font-bold">Solution</h2>
-            <p className="mt-5 leading-8 text-[var(--muted)]">
+            <p className="mt-5 leading-8 text-[var(--muted-foreground)]">
               {project.solution}
             </p>
           </div>
@@ -146,7 +146,7 @@ const ProjectDetailsPage = async ({ params }) => {
 
             <ul className="mt-6 space-y-4">
               {project.features.map((feature) => (
-                <li key={feature} className="flex gap-3 text-[var(--muted)]">
+                <li key={feature} className="flex gap-3 text-[var(--muted-foreground)]">
                   <span className="text-[var(--primary)]">✓</span>
                   <span>{feature}</span>
                 </li>
@@ -161,7 +161,7 @@ const ProjectDetailsPage = async ({ params }) => {
               {project.stack.map((item) => (
                 <span
                   key={item}
-                  className="rounded-full border border-[var(--border)] bg-[var(--background)]/50 px-4 py-2 text-sm text-[var(--muted)]"
+                  className="rounded-full border border-[var(--border)] bg-[var(--background)]/50 px-4 py-2 text-sm text-[var(--muted-foreground)]"
                 >
                   {item}
                 </span>
