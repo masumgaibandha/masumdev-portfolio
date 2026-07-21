@@ -31,7 +31,7 @@ export const homepageProjects: readonly HomepageProject[] = [
     screenshots: [
       {
         src: "/work/dentflow/dashboard.webp",
-        alt: "DentFlow admin dashboard showing clinic totals for patients, dentists and services alongside a paid-revenue chart",
+        alt: "DentFlow administration dashboard showing clinic totals for patients, dentists and services, paid-revenue analytics, and navigation to practice management sections",
         width: 1534,
         height: 704,
       },

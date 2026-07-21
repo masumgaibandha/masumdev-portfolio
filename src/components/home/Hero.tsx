@@ -6,22 +6,20 @@ import Text from "@/components/ui/Text";
 import { flagshipProjects } from "@/config/projects";
 
 /**
- * Two-column hero. Left carries development-first positioning; right shows
- * authentic product UI — one dominant screenshot with a smaller supporting
- * one. No glow, no invented UI, no device mockups.
+ * Two-column hero. Left carries development-first positioning; right shows a
+ * single authentic product screenshot given the wider column so the interface
+ * stays readable. One image only — no second screenshot, no device mockup, no
+ * browser chrome, no glow, no invented UI.
  */
 export default function Hero() {
   const dentflow = flagshipProjects.find((p) => p.slug === "dentflow");
-  const skillpath = flagshipProjects.find((p) => p.slug === "skillpath-ai");
-
-  const dominant = dentflow?.screenshots?.[0];
-  const supporting = skillpath?.screenshots?.[0];
+  const dashboard = dentflow?.screenshots?.[0];
 
   return (
     <section className="border-b border-border bg-background py-16 sm:py-20 lg:py-28">
       <Container width="wide">
-        <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
-          <div className="lg:col-span-6 xl:col-span-5">
+        <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-12 xl:gap-16">
+          <div className="lg:col-span-5">
             <Text size="sm" mono tone="muted" className="uppercase">
               Full-Stack Development
             </Text>
@@ -47,31 +45,21 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="lg:col-span-6 xl:col-span-7">
-            {dominant ? (
-              <div className="relative">
-                <ScreenshotFrame
-                  screenshot={dominant}
-                  priority
-                  sizes="(min-width: 1280px) 58vw, (min-width: 1024px) 50vw, 100vw"
-                  className="shadow-sm"
-                />
-
-                {supporting ? (
-                  /*
-                   * Supporting screenshot sits below and inset rather than
-                   * floating over the dominant one, so neither is cropped and
-                   * both stay legible. Static on small screens.
-                   */
-                  <div className="mt-4 sm:-mt-10 sm:ml-auto sm:w-3/5 lg:-mt-12 lg:w-[55%]">
-                    <ScreenshotFrame
-                      screenshot={supporting}
-                      sizes="(min-width: 1024px) 32vw, 100vw"
-                      className="shadow-sm"
-                    />
-                  </div>
-                ) : null}
-              </div>
+          {/*
+           * Wider column than the copy so the dashboard renders large enough
+           * to read. `padded` puts a graphite mat behind the light screenshot,
+           * which matters in dark mode — without it the white UI reads as
+           * pasted onto black.
+           */}
+          <div className="lg:col-span-7">
+            {dashboard ? (
+              <ScreenshotFrame
+                screenshot={dashboard}
+                priority
+                padded
+                sizes="(min-width: 1280px) 700px, (min-width: 1024px) 55vw, (min-width: 640px) calc(100vw - 3rem), calc(100vw - 2rem)"
+                className="shadow-sm"
+              />
             ) : null}
           </div>
         </div>
