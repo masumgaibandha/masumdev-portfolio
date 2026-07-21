@@ -9,13 +9,15 @@ import Text from "@/components/ui/Text";
  */
 export default function FinalCTA() {
   return (
+    // Closing statement gets the most room on the page — the only section
+    // wider-spaced than the hero.
     <section
-      className="bg-surface py-16 sm:py-24"
+      className="bg-surface py-24 sm:py-36"
       aria-labelledby="final-cta-heading"
     >
       <Container width="wide">
         <div className="max-w-2xl">
-          <Heading as="h2" size="lg" id="final-cta-heading">
+          <Heading as="h2" size="xl" id="final-cta-heading">
             Have a product idea or a system that needs rebuilding?
           </Heading>
 

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 import Heading from "@/components/ui/Heading";
+import SectionLabel from "@/components/ui/SectionLabel";
 import Text from "@/components/ui/Text";
 
 /**
@@ -33,15 +34,13 @@ export default function AboutPreview() {
           </div>
 
           <div className="lg:col-span-8">
-            <Text size="sm" mono tone="muted" className="uppercase">
-              About
-            </Text>
+            <SectionLabel index={6}>About</SectionLabel>
 
             <Heading
               as="h2"
               size="lg"
               id="about-preview-heading"
-              className="mt-3"
+              className="mt-5"
             >
               Full-stack developer with real business experience
             </Heading>

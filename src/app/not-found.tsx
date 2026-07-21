@@ -1,6 +1,7 @@
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 import Heading from "@/components/ui/Heading";
+import SectionLabel from "@/components/ui/SectionLabel";
 import Text from "@/components/ui/Text";
 
 /*
@@ -11,9 +12,7 @@ export default function NotFound() {
     <section className="flex min-h-[70vh] items-center bg-background py-20">
       <Container width="wide">
         <div className="max-w-xl">
-          <Text size="sm" mono tone="muted" className="uppercase">
-            Error 404
-          </Text>
+          <SectionLabel>Error 404</SectionLabel>
 
           <Heading as="h1" size="xl" className="mt-4">
             This page does not exist.

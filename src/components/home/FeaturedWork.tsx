@@ -4,6 +4,7 @@ import Badge from "@/components/ui/Badge";
 import Container from "@/components/ui/Container";
 import Heading from "@/components/ui/Heading";
 import ScreenshotFrame from "@/components/ui/ScreenshotFrame";
+import SectionLabel from "@/components/ui/SectionLabel";
 import Text from "@/components/ui/Text";
 import { capstoneProjects, flagshipProjects } from "@/config/projects";
 import { relFor } from "@/config/social";
@@ -78,15 +79,13 @@ export default function FeaturedWork() {
   return (
     <section
       id="work"
-      className="border-b border-border bg-background py-16 sm:py-24"
+      className="border-b border-border bg-background py-24 sm:py-32"
       aria-labelledby="work-heading"
     >
       <Container width="wide">
         <div className="max-w-2xl">
-          <Text size="sm" mono tone="muted" className="uppercase">
-            Selected Work
-          </Text>
-          <Heading as="h2" size="lg" id="work-heading" className="mt-3">
+          <SectionLabel index={1}>Selected Work</SectionLabel>
+          <Heading as="h2" size="lg" id="work-heading" className="mt-5">
             Products built end to end
           </Heading>
         </div>

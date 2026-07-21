@@ -7,6 +7,7 @@ import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 import Heading from "@/components/ui/Heading";
 import Section from "@/components/ui/Section";
+import SectionLabel from "@/components/ui/SectionLabel";
 import Text from "@/components/ui/Text";
 import { featuredProjects } from "@/data/projects";
 
@@ -23,9 +24,7 @@ export default function ProjectsPage() {
       <Section>
         <Container width="wide">
           <div className="max-w-2xl">
-            <Text size="sm" mono tone="muted" className="uppercase">
-              Projects
-            </Text>
+            <SectionLabel>Projects</SectionLabel>
 
             <Heading as="h1" size="xl" className="mt-4">
               Web applications I&apos;ve built

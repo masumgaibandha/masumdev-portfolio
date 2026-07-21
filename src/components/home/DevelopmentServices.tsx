@@ -1,5 +1,6 @@
 import Container from "@/components/ui/Container";
 import Heading from "@/components/ui/Heading";
+import SectionLabel from "@/components/ui/SectionLabel";
 import Text from "@/components/ui/Text";
 import { developmentServices } from "@/config/services";
 
@@ -17,14 +18,12 @@ export default function DevelopmentServices() {
     >
       <Container width="wide">
         <div className="max-w-2xl">
-          <Text size="sm" mono tone="muted" className="uppercase">
-            What I Build
-          </Text>
+          <SectionLabel index={2}>What I Build</SectionLabel>
           <Heading
             as="h2"
             size="lg"
             id="dev-services-heading"
-            className="mt-3"
+            className="mt-5"
           >
             {developmentServices.heading}
           </Heading>

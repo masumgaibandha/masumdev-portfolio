@@ -26,7 +26,7 @@ export default function Navbar() {
         <div className="flex h-16 items-center justify-between gap-4">
           <Link
             href="/"
-            className="text-lg font-semibold tracking-tight text-foreground"
+            className="text-label text-sm font-medium text-foreground"
           >
             Masum<span className="text-primary">Dev</span>
           </Link>

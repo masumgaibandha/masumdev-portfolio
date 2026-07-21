@@ -6,6 +6,7 @@ import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 import Heading from "@/components/ui/Heading";
 import Section from "@/components/ui/Section";
+import SectionLabel from "@/components/ui/SectionLabel";
 import Text from "@/components/ui/Text";
 import { statsAttribution, visibleUpworkStats } from "@/config/stats";
 
@@ -69,9 +70,7 @@ export default function AboutPage() {
         <Container width="wide">
           <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-7">
-              <Text size="sm" mono tone="muted" className="uppercase">
-                About
-              </Text>
+              <SectionLabel>About</SectionLabel>
 
               <Heading as="h1" size="xl" className="mt-4">
                 Full-stack developer with real client experience
@@ -119,9 +118,7 @@ export default function AboutPage() {
 
       <Section background="surface" spacing="compact" bordered>
         <Container width="wide">
-          <Text size="sm" mono tone="muted" className="uppercase">
-            {statsAttribution.note}
-          </Text>
+          <SectionLabel>{statsAttribution.note}</SectionLabel>
 
           <dl className="mt-6 grid grid-cols-2 gap-x-8 gap-y-8 lg:grid-cols-4">
             {highlights.map((item) => (

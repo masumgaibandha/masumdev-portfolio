@@ -2,6 +2,7 @@ import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 import Heading from "@/components/ui/Heading";
 import ScreenshotFrame from "@/components/ui/ScreenshotFrame";
+import SectionLabel from "@/components/ui/SectionLabel";
 import Text from "@/components/ui/Text";
 import { flagshipProjects } from "@/config/projects";
 
@@ -16,15 +17,13 @@ export default function Hero() {
   const dashboard = dentflow?.screenshots?.[0];
 
   return (
-    <section className="border-b border-border bg-background py-16 sm:py-20 lg:py-28">
+    <section className="border-b border-border bg-background py-20 sm:py-28 lg:py-36">
       <Container width="wide">
         <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-12 xl:gap-16">
           <div className="lg:col-span-5">
-            <Text size="sm" mono tone="muted" className="uppercase">
-              Full-Stack Development
-            </Text>
+            <SectionLabel>Full-Stack Development</SectionLabel>
 
-            <Heading as="h1" size="xl" className="mt-4">
+            <Heading as="h1" size="xl" className="mt-6">
               I build full-stack products that turn complex ideas into reliable
               software.
             </Heading>

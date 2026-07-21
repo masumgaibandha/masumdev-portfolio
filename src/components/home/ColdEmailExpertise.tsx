@@ -2,6 +2,7 @@ import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 import Heading from "@/components/ui/Heading";
+import SectionLabel from "@/components/ui/SectionLabel";
 import Text from "@/components/ui/Text";
 import { coldEmailServices, coldEmailTools } from "@/config/services";
 
@@ -20,14 +21,12 @@ export default function ColdEmailExpertise() {
       <Container width="wide">
         <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
-            <Text size="sm" mono tone="muted" className="uppercase">
-              Also
-            </Text>
+            <SectionLabel index={3}>Also</SectionLabel>
             <Heading
               as="h2"
               size="md"
               id="cold-email-heading"
-              className="mt-3"
+              className="mt-5"
             >
               {coldEmailServices.heading}
             </Heading>
@@ -60,9 +59,7 @@ export default function ColdEmailExpertise() {
             </ul>
 
             <div className="mt-8 border-t border-border pt-6">
-              <p className="font-mono text-xs uppercase tracking-wide text-muted-foreground">
-                Tools
-              </p>
+              <p className="text-label text-xs text-muted-foreground">Tools</p>
               <ul className="mt-3 flex flex-wrap gap-2">
                 {coldEmailTools.map((tool) => (
                   <li key={tool}>

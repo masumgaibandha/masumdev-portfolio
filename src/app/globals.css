@@ -104,8 +104,34 @@
   --color-destructive-foreground: var(--destructive-foreground);
   --color-ring: var(--ring);
 
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-sans-family);
+  --font-mono: var(--font-mono-family);
+}
+
+/*
+ * Type rules for the systems direction.
+ *
+ * 11. Display headings set tight: -0.03em at the largest sizes, easing to 0
+ *     by body size. Plex Sans opens up considerably at scale, so the default
+ *     tracking reads loose in a headline.
+ * 12. Mono is structural, not decorative — section labels, index numbers,
+ *     stack badges, metadata. It always carries uppercase + wide tracking so
+ *     it reads as a label rather than as body copy set in the wrong face.
+ * 13. Numerals in data positions (stats, index numbers) use tabular figures
+ *     so columns align and digits do not shift between values.
+ */
+.text-display {
+  letter-spacing: -0.03em;
+}
+
+.text-label {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
 }
 
 html {

@@ -1,5 +1,6 @@
 import Container from "@/components/ui/Container";
 import Heading from "@/components/ui/Heading";
+import SectionLabel from "@/components/ui/SectionLabel";
 import Text from "@/components/ui/Text";
 import { technicalCapabilities } from "@/config/services";
 
@@ -10,19 +11,17 @@ import { technicalCapabilities } from "@/config/services";
 export default function TechnicalCapabilities() {
   return (
     <section
-      className="border-b border-border bg-background py-16 sm:py-24"
+      className="border-b border-border bg-background py-12 sm:py-16"
       aria-labelledby="capabilities-heading"
     >
       <Container width="wide">
         <div className="max-w-2xl">
-          <Text size="sm" mono tone="muted" className="uppercase">
-            Stack
-          </Text>
+          <SectionLabel index={4}>Stack</SectionLabel>
           <Heading
             as="h2"
             size="lg"
             id="capabilities-heading"
-            className="mt-3"
+            className="mt-5"
           >
             Technical capabilities
           </Heading>

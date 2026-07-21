@@ -1,5 +1,6 @@
 import Container from "@/components/ui/Container";
 import Heading from "@/components/ui/Heading";
+import SectionLabel from "@/components/ui/SectionLabel";
 import Text from "@/components/ui/Text";
 import { workingProcess } from "@/config/services";
 
@@ -16,10 +17,8 @@ export default function WorkingProcess() {
       <Container width="wide">
         <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-4">
-            <Text size="sm" mono tone="muted" className="uppercase">
-              Process
-            </Text>
-            <Heading as="h2" size="lg" id="process-heading" className="mt-3">
+            <SectionLabel index={5}>Process</SectionLabel>
+            <Heading as="h2" size="lg" id="process-heading" className="mt-5">
               How a project runs
             </Heading>
             <Text tone="muted" className="mt-4">
@@ -36,7 +35,7 @@ export default function WorkingProcess() {
               >
                 <span
                   aria-hidden="true"
-                  className="mt-0.5 shrink-0 font-mono text-sm tabular-nums text-muted-foreground"
+                  className="tabular mt-0.5 shrink-0 font-mono text-sm text-muted-foreground"
                 >
                   {String(step.step).padStart(2, "0")}
                 </span>

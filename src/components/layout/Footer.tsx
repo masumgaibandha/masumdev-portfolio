@@ -16,7 +16,7 @@ export default function Footer() {
       <Container width="wide">
         <div className="grid gap-10 py-12 md:grid-cols-3">
           <div>
-            <p className="text-lg font-semibold tracking-tight text-foreground">
+            <p className="text-label text-sm font-medium text-foreground">
               Masum<span className="text-primary">Dev</span>
             </p>
 

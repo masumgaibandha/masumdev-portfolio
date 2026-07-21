@@ -7,6 +7,7 @@ import ContactForm from "@/components/contact/ContactForm";
 import Container from "@/components/ui/Container";
 import Heading from "@/components/ui/Heading";
 import Section from "@/components/ui/Section";
+import SectionLabel from "@/components/ui/SectionLabel";
 import Text from "@/components/ui/Text";
 import { siteConfig } from "@/config/site";
 import { relFor } from "@/config/social";
@@ -58,9 +59,7 @@ export default function ContactPage() {
       <Section>
         <Container width="wide">
           <div className="max-w-2xl">
-            <Text size="sm" mono tone="muted" className="uppercase">
-              Contact
-            </Text>
+            <SectionLabel>Contact</SectionLabel>
 
             <Heading as="h1" size="xl" className="mt-4">
               Let&apos;s build your next web application
