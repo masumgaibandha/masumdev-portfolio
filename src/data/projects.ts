@@ -1,4 +1,6 @@
-export const featuredProjects = [
+import type { CaseStudyProject } from "@/types/project";
+
+export const featuredProjects: readonly CaseStudyProject[] = [
   {
     id: 1,
     slug: "toytopia",
@@ -133,6 +135,7 @@ export const featuredProjects = [
   },
 ];
 
-export const getProjectBySlug = (slug) => {
-  return featuredProjects.find((project) => project.slug === slug);
-};
+export const getProjectBySlug = (
+  slug: string,
+): CaseStudyProject | undefined =>
+  featuredProjects.find((project) => project.slug === slug);

@@ -33,3 +33,26 @@ export type HomepageProject = {
   /** Absent until authentic assets are supplied. Never fabricated. */
   screenshots?: ProjectScreenshot[];
 };
+
+/**
+ * Shape backing /projects and /projects/[slug].
+ *
+ * Kept separate from HomepageProject: this drives real routes and sitemap
+ * entries, so its fields are the ones the detail template renders.
+ */
+export type CaseStudyProject = {
+  id: number;
+  slug: string;
+  title: string;
+  category: string;
+  image: string;
+  description: string;
+  overview: string;
+  problem: string;
+  solution: string;
+  features: readonly string[];
+  stack: readonly string[];
+  /** External URLs — always rendered with a native anchor. */
+  liveLink: string;
+  githubLink: string;
+};

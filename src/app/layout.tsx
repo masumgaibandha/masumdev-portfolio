@@ -1,9 +1,12 @@
 import "./globals.css";
+import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import ThemeProvider from "@/providers/ThemeProvider";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
+import type { ReactNode } from "react";
 import { Toaster } from "react-hot-toast";
+
+import Footer from "@/components/layout/Footer";
+import Navbar from "@/components/layout/Navbar";
+import ThemeProvider from "@/providers/ThemeProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,7 +20,7 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: {
     default: "MasumDev | Full Stack Developer",
     template: "%s | MasumDev",
@@ -56,7 +59,11 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({
+  children,
+}: {
+  children: ReactNode;
+}) {
   return (
     <html
       lang="en"
